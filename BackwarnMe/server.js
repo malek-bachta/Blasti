@@ -33,6 +33,7 @@ app.use(express.urlencoded({ extended: true })); // Pour analyser application/x-
 app.use("/api/user", require("./routes/user.route"));
 app.use("/api/movies", require("./routes/movies.route"));
 app.use("/api/events", require("./routes/events.route"));
+app.use("/api/shows", require("./routes/shows.route"));
 
 //////////////////////////////////////////////////////////////////////////////
 app.listen(PORT, () => {

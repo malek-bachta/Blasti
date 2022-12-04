@@ -1,49 +1,40 @@
 const mongoose = require("mongoose");
 
-
-const eventsSchema = mongoose.Schema({
+const showsSchema = mongoose.Schema({
     title: {
         type: String,
         required: true,
         unique: true,
     },
-    adress: {
-        type: String,
-        required: true,
-    },
-    type: {
-        type: String,
-        required: true,
-    },
-    cost: {
-        type: String,
-        required: true,
-    }, 
-    description: {
-        type: String,
-        required: true,
-    },
-
     date: {
         type: String,
         required: false,
     },
-    guest: {
+    genre: {
         type: String,
-        required: false,
+        required: true,
     },
-    pAvailable: {
+   
+    description: {
         type: String,
-        required: false,
+        required: true,
     },
     image: {
         type: String,
         required: false,
     },
-
-
+   
+    place: {
+        type: String,
+        required: false,
+    },
+   
+    actors: {
+        type: String,
+        required: false,
+    },
 });
 
-const events = mongoose.model("events", eventsSchema);
+const shows = mongoose.model("shows", showsSchema);
 
-module.exports = { events };
+module.exports = { shows };
