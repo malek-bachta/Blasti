@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/AllOfPageLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+
+    tools:context=".Login">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtEmailLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/email"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeColor="#FDC716"
+        app:boxStrokeWidth="2dp"
+        app:startIconDrawable="@drawable/ic_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtPasswordLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtEmailLayout"
+        android:layout_gravity="center"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/password"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeColor="#FDC716"
+        app:boxStrokeWidth="2dp"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/ic_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar_login"
+        android:layout_width="97dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/txtEmailLayout"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/textView4"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/Redfate7"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.417" />
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="218dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtForgetPassword"
+        android:layout_alignStart="@+id/comboRememberMe"
+        android:layout_alignEnd="@+id/txtForgetPassword"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="55dp"
+        android:background="@drawable/roundedbuttonred"
+        android:text="@string/login"
+        android:textColor="#ffff" />
+
+    <CheckBox
+        android:id="@+id/comboRememberMe"
+        android:layout_width="139dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtPasswordLayout"
+        android:layout_alignTop="@+id/txtForgetPassword"
+        android:layout_alignBottom="@+id/txtForgetPassword"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="-184dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="184dp"
+        android:layout_toStartOf="@+id/txtForgetPassword"
+        android:buttonTint="#FDC716"
+        android:minHeight="48dp"
+        android:text="@string/remember_me"
+        android:textColor="#ffffffff"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txtForgetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPasswordLayout"
+        android:layout_alignEnd="@+id/txtPasswordLayout"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="21dp"
+        android:text="@string/forgot_password"
+        android:textColor="#FDC716"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/login"
+        android:textColor="#ffffffff"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/btnGoToSignUp"
+        android:layout_width="332dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="435dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="@string/DontHaveAccount"
+        android:textColor="#292929"
+        android:textSize="15sp"
+        android:visibility="visible"
+        app:layout_constraintHorizontal_bias="0.457"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        app:srcCompat="@drawable/bg2" />
+
+
+</RelativeLayout>

@@ -1,0 +1,348 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="tn.mbach.warnMe"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->E:\warnMe\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->E:\warnMe\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+11-->E:\warnMe\app\src\main\AndroidManifest.xml:5:5-79
+11-->E:\warnMe\app\src\main\AndroidManifest.xml:5:22-76
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->E:\warnMe\app\src\main\AndroidManifest.xml:6:5-67
+12-->E:\warnMe\app\src\main\AndroidManifest.xml:6:22-64
+13
+14    <queries>
+14-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mbach\.gradle\caches\transforms-3\55636ee3246ae23b5d4832821e12c18c\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:26:5-31:15
+15        <provider
+15-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mbach\.gradle\caches\transforms-3\55636ee3246ae23b5d4832821e12c18c\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:27:9-30:67
+16            android:name="com.android.car.ui.plugin.PluginNameProvider"
+16-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mbach\.gradle\caches\transforms-3\55636ee3246ae23b5d4832821e12c18c\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:28:13-72
+17            android:authorities="com.android.car.ui.plugin" />
+17-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mbach\.gradle\caches\transforms-3\55636ee3246ae23b5d4832821e12c18c\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:29:13-60
+18        <!-- Needs to be explicitly declared on Android R+ -->
+19        <package android:name="com.google.android.apps.maps" />
+19-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\mbach\.gradle\caches\transforms-3\00d58ce0dde97598d6592a089f087019\transformed\play-services-maps-18.1.0\AndroidManifest.xml:33:9-64
+19-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\mbach\.gradle\caches\transforms-3\00d58ce0dde97598d6592a089f087019\transformed\play-services-maps-18.1.0\AndroidManifest.xml:33:18-61
+20    </queries>
+21
+22    <uses-feature
+22-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\mbach\.gradle\caches\transforms-3\00d58ce0dde97598d6592a089f087019\transformed\play-services-maps-18.1.0\AndroidManifest.xml:26:5-28:35
+23        android:glEsVersion="0x00020000"
+23-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\mbach\.gradle\caches\transforms-3\00d58ce0dde97598d6592a089f087019\transformed\play-services-maps-18.1.0\AndroidManifest.xml:27:9-41
+24        android:required="true" />
+24-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\mbach\.gradle\caches\transforms-3\00d58ce0dde97598d6592a089f087019\transformed\play-services-maps-18.1.0\AndroidManifest.xml:28:9-32
+25
+26    <application
+26-->E:\warnMe\app\src\main\AndroidManifest.xml:8:5-126:19
+27        android:allowBackup="true"
+27-->E:\warnMe\app\src\main\AndroidManifest.xml:9:9-35
+28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+28-->[androidx.core:core:1.8.0] C:\Users\mbach\.gradle\caches\transforms-3\784a04540523630dd3de43ef680f314c\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+29        android:dataExtractionRules="@xml/data_extraction_rules"
+29-->E:\warnMe\app\src\main\AndroidManifest.xml:10:9-65
+30        android:debuggable="true"
+31        android:fullBackupContent="@xml/backup_rules"
+31-->E:\warnMe\app\src\main\AndroidManifest.xml:11:9-54
+32        android:icon="@mipmap/ic_launcher"
+32-->E:\warnMe\app\src\main\AndroidManifest.xml:12:9-43
+33        android:label="@string/app_name"
+33-->E:\warnMe\app\src\main\AndroidManifest.xml:13:9-41
+34        android:roundIcon="@mipmap/ic_launcher_round"
+34-->E:\warnMe\app\src\main\AndroidManifest.xml:14:9-54
+35        android:supportsRtl="true"
+35-->E:\warnMe\app\src\main\AndroidManifest.xml:15:9-35
+36        android:testOnly="true"
+37        android:theme="@style/Theme.warnMe"
+37-->E:\warnMe\app\src\main\AndroidManifest.xml:16:9-44
+38        android:usesCleartextTraffic="true" >
+38-->E:\warnMe\app\src\main\AndroidManifest.xml:17:9-44
+39        <activity
+39-->E:\warnMe\app\src\main\AndroidManifest.xml:19:9-25:20
+40            android:name="tn.mbach.warnMe.ShowDetail"
+40-->E:\warnMe\app\src\main\AndroidManifest.xml:20:13-39
+41            android:exported="false" >
+41-->E:\warnMe\app\src\main\AndroidManifest.xml:21:13-37
+42            <meta-data
+42-->E:\warnMe\app\src\main\AndroidManifest.xml:22:13-24:36
+43                android:name="android.app.lib_name"
+43-->E:\warnMe\app\src\main\AndroidManifest.xml:23:17-52
+44                android:value="" />
+44-->E:\warnMe\app\src\main\AndroidManifest.xml:24:17-33
+45        </activity>
+46        <activity
+46-->E:\warnMe\app\src\main\AndroidManifest.xml:26:9-32:20
+47            android:name="tn.mbach.warnMe.MovieDetail"
+47-->E:\warnMe\app\src\main\AndroidManifest.xml:27:13-40
+48            android:exported="false" >
+48-->E:\warnMe\app\src\main\AndroidManifest.xml:28:13-37
+49            <meta-data
+49-->E:\warnMe\app\src\main\AndroidManifest.xml:22:13-24:36
+50                android:name="android.app.lib_name"
+50-->E:\warnMe\app\src\main\AndroidManifest.xml:23:17-52
+51                android:value="" />
+51-->E:\warnMe\app\src\main\AndroidManifest.xml:24:17-33
+52        </activity>
+53        <activity
+53-->E:\warnMe\app\src\main\AndroidManifest.xml:33:9-39:20
+54            android:name="tn.mbach.warnMe.moviedetail"
+54-->E:\warnMe\app\src\main\AndroidManifest.xml:34:13-40
+55            android:exported="false" >
+55-->E:\warnMe\app\src\main\AndroidManifest.xml:35:13-37
+56            <meta-data
+56-->E:\warnMe\app\src\main\AndroidManifest.xml:22:13-24:36
+57                android:name="android.app.lib_name"
+57-->E:\warnMe\app\src\main\AndroidManifest.xml:23:17-52
+58                android:value="" />
+58-->E:\warnMe\app\src\main\AndroidManifest.xml:24:17-33
+59        </activity>
+60        <activity
+60-->E:\warnMe\app\src\main\AndroidManifest.xml:40:9-46:20
+61            android:name="tn.mbach.warnMe.back.HomeAdmin"
+61-->E:\warnMe\app\src\main\AndroidManifest.xml:41:13-43
+62            android:exported="false" >
+62-->E:\warnMe\app\src\main\AndroidManifest.xml:42:13-37
+63            <meta-data
+63-->E:\warnMe\app\src\main\AndroidManifest.xml:22:13-24:36
+64                android:name="android.app.lib_name"
+64-->E:\warnMe\app\src\main\AndroidManifest.xml:23:17-52
+65                android:value="" />
+65-->E:\warnMe\app\src\main\AndroidManifest.xml:24:17-33
+66        </activity>
+67        <activity
+67-->E:\warnMe\app\src\main\AndroidManifest.xml:47:9-53:20
+68            android:name="tn.mbach.warnMe.front.EditProfile"
+68-->E:\warnMe\app\src\main\AndroidManifest.xml:48:13-46
+69            android:exported="false" >
+69-->E:\warnMe\app\src\main\AndroidManifest.xml:49:13-37
+70            <meta-data
+70-->E:\warnMe\app\src\main\AndroidManifest.xml:22:13-24:36
+71                android:name="android.app.lib_name"
+71-->E:\warnMe\app\src\main\AndroidManifest.xml:23:17-52
+72                android:value="" />
+72-->E:\warnMe\app\src\main\AndroidManifest.xml:24:17-33
+73        </activity>
+74        <activity
+74-->E:\warnMe\app\src\main\AndroidManifest.xml:54:9-60:20
+75            android:name="tn.mbach.warnMe.front.TicketNotif"
+75-->E:\warnMe\app\src\main\AndroidManifest.xml:55:13-46
+76            android:exported="false" >
+76-->E:\warnMe\app\src\main\AndroidManifest.xml:56:13-37
+77            <meta-data
+77-->E:\warnMe\app\src\main\AndroidManifest.xml:22:13-24:36
+78                android:name="android.app.lib_name"
+78-->E:\warnMe\app\src\main\AndroidManifest.xml:23:17-52
+79                android:value="" />
+79-->E:\warnMe\app\src\main\AndroidManifest.xml:24:17-33
+80        </activity>
+81        <activity
+81-->E:\warnMe\app\src\main\AndroidManifest.xml:61:9-67:20
+82            android:name="tn.mbach.warnMe.front.ReservationsNotif"
+82-->E:\warnMe\app\src\main\AndroidManifest.xml:62:13-52
+83            android:exported="false" >
+83-->E:\warnMe\app\src\main\AndroidManifest.xml:63:13-37
+84            <meta-data
+84-->E:\warnMe\app\src\main\AndroidManifest.xml:22:13-24:36
+85                android:name="android.app.lib_name"
+85-->E:\warnMe\app\src\main\AndroidManifest.xml:23:17-52
+86                android:value="" />
+86-->E:\warnMe\app\src\main\AndroidManifest.xml:24:17-33
+87        </activity>
+88        <!--
+89             TODO: Before you run your application, you need a Google Maps API key.
+90
+91             To get one, follow the directions here:
+92
+93                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+94
+95             Once you have your API key (it starts with "AIza"), define a new property in your
+96             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+97             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+98        -->
+99        <meta-data
+99-->E:\warnMe\app\src\main\AndroidManifest.xml:79:9-81:44
+100            android:name="com.google.android.geo.API_KEY"
+100-->E:\warnMe\app\src\main\AndroidManifest.xml:80:13-58
+101            android:value="YOUR_API_KEY" />
+101-->E:\warnMe\app\src\main\AndroidManifest.xml:81:13-41
+102
+103        <activity
+103-->E:\warnMe\app\src\main\AndroidManifest.xml:83:9-90:20
+104            android:name="tn.mbach.warnMe.AutoLogin"
+104-->E:\warnMe\app\src\main\AndroidManifest.xml:84:13-38
+105            android:exported="false"
+105-->E:\warnMe\app\src\main\AndroidManifest.xml:85:13-37
+106            android:theme="@style/Theme.warnMe.NoActionBar" >
+106-->E:\warnMe\app\src\main\AndroidManifest.xml:86:13-60
+107            <meta-data
+107-->E:\warnMe\app\src\main\AndroidManifest.xml:22:13-24:36
+108                android:name="android.app.lib_name"
+108-->E:\warnMe\app\src\main\AndroidManifest.xml:23:17-52
+109                android:value="" />
+109-->E:\warnMe\app\src\main\AndroidManifest.xml:24:17-33
+110        </activity>
+111        <activity
+111-->E:\warnMe\app\src\main\AndroidManifest.xml:91:9-101:20
+112            android:name="tn.mbach.warnMe.SplashScreen"
+112-->E:\warnMe\app\src\main\AndroidManifest.xml:92:13-41
+113            android:exported="true"
+113-->E:\warnMe\app\src\main\AndroidManifest.xml:93:13-36
+114            android:label="@string/app_name"
+114-->E:\warnMe\app\src\main\AndroidManifest.xml:94:13-45
+115            android:theme="@style/Theme.warnMe.NoActionBar" >
+115-->E:\warnMe\app\src\main\AndroidManifest.xml:95:13-60
+116            <intent-filter>
+116-->E:\warnMe\app\src\main\AndroidManifest.xml:96:13-100:29
+117                <action android:name="android.intent.action.MAIN" />
+117-->E:\warnMe\app\src\main\AndroidManifest.xml:97:17-69
+117-->E:\warnMe\app\src\main\AndroidManifest.xml:97:25-66
+118
+119                <category android:name="android.intent.category.LAUNCHER" />
+119-->E:\warnMe\app\src\main\AndroidManifest.xml:99:17-77
+119-->E:\warnMe\app\src\main\AndroidManifest.xml:99:27-74
+120            </intent-filter>
+121        </activity>
+122        <activity
+122-->E:\warnMe\app\src\main\AndroidManifest.xml:102:9-109:20
+123            android:name="tn.mbach.warnMe.front.Home"
+123-->E:\warnMe\app\src\main\AndroidManifest.xml:103:13-39
+124            android:exported="false"
+124-->E:\warnMe\app\src\main\AndroidManifest.xml:104:13-37
+125            android:theme="@style/Theme.warnMe.NoActionBar" >
+125-->E:\warnMe\app\src\main\AndroidManifest.xml:105:13-60
+126            <meta-data
+126-->E:\warnMe\app\src\main\AndroidManifest.xml:22:13-24:36
+127                android:name="android.app.lib_name"
+127-->E:\warnMe\app\src\main\AndroidManifest.xml:23:17-52
+128                android:value="" />
+128-->E:\warnMe\app\src\main\AndroidManifest.xml:24:17-33
+129        </activity>
+130        <activity
+130-->E:\warnMe\app\src\main\AndroidManifest.xml:110:9-117:20
+131            android:name="tn.mbach.warnMe.SignUp"
+131-->E:\warnMe\app\src\main\AndroidManifest.xml:111:13-35
+132            android:exported="false"
+132-->E:\warnMe\app\src\main\AndroidManifest.xml:112:13-37
+133            android:theme="@style/Theme.warnMe.NoActionBar" >
+133-->E:\warnMe\app\src\main\AndroidManifest.xml:113:13-60
+134            <meta-data
+134-->E:\warnMe\app\src\main\AndroidManifest.xml:22:13-24:36
+135                android:name="android.app.lib_name"
+135-->E:\warnMe\app\src\main\AndroidManifest.xml:23:17-52
+136                android:value="" />
+136-->E:\warnMe\app\src\main\AndroidManifest.xml:24:17-33
+137        </activity>
+138        <activity
+138-->E:\warnMe\app\src\main\AndroidManifest.xml:118:9-125:20
+139            android:name="tn.mbach.warnMe.Login"
+139-->E:\warnMe\app\src\main\AndroidManifest.xml:119:13-34
+140            android:exported="false"
+140-->E:\warnMe\app\src\main\AndroidManifest.xml:120:13-37
+141            android:theme="@style/Theme.warnMe.NoActionBar" >
+141-->E:\warnMe\app\src\main\AndroidManifest.xml:121:13-60
+142            <meta-data
+142-->E:\warnMe\app\src\main\AndroidManifest.xml:22:13-24:36
+143                android:name="android.app.lib_name"
+143-->E:\warnMe\app\src\main\AndroidManifest.xml:23:17-52
+144                android:value="" />
+144-->E:\warnMe\app\src\main\AndroidManifest.xml:24:17-33
+145        </activity>
+146
+147        <provider
+147-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mbach\.gradle\caches\transforms-3\55636ee3246ae23b5d4832821e12c18c\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:34:9-39:71
+148            android:name="com.android.car.ui.core.CarUiInstaller"
+148-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mbach\.gradle\caches\transforms-3\55636ee3246ae23b5d4832821e12c18c\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:35:13-66
+149            android:authorities="tn.mbach.warnMe.CarUiInstaller"
+149-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mbach\.gradle\caches\transforms-3\55636ee3246ae23b5d4832821e12c18c\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:36:13-66
+150            android:directBootAware="true"
+150-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mbach\.gradle\caches\transforms-3\55636ee3246ae23b5d4832821e12c18c\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:37:13-43
+151            android:exported="false"
+151-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mbach\.gradle\caches\transforms-3\55636ee3246ae23b5d4832821e12c18c\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:38:13-37
+152            android:process="@string/car_ui_installer_process_name" />
+152-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mbach\.gradle\caches\transforms-3\55636ee3246ae23b5d4832821e12c18c\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:39:13-68
+153        <provider
+153-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mbach\.gradle\caches\transforms-3\55636ee3246ae23b5d4832821e12c18c\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:40:9-45:79
+154            android:name="com.android.car.ui.core.SearchResultsProvider"
+154-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mbach\.gradle\caches\transforms-3\55636ee3246ae23b5d4832821e12c18c\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:41:13-73
+155            android:authorities="tn.mbach.warnMe.SearchResultsProvider"
+155-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mbach\.gradle\caches\transforms-3\55636ee3246ae23b5d4832821e12c18c\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:42:13-73
+156            android:exported="true"
+156-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mbach\.gradle\caches\transforms-3\55636ee3246ae23b5d4832821e12c18c\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:43:13-36
+157            android:process="@string/car_ui_installer_process_name"
+157-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mbach\.gradle\caches\transforms-3\55636ee3246ae23b5d4832821e12c18c\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:44:13-68
+158            android:readPermission="com.android.car.ui.READ_SEARCH_RESULTS" /> <!-- Needs to be explicitly declared on P+ -->
+158-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\mbach\.gradle\caches\transforms-3\55636ee3246ae23b5d4832821e12c18c\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:45:13-76
+159        <uses-library
+159-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\mbach\.gradle\caches\transforms-3\00d58ce0dde97598d6592a089f087019\transformed\play-services-maps-18.1.0\AndroidManifest.xml:39:9-41:40
+160            android:name="org.apache.http.legacy"
+160-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\mbach\.gradle\caches\transforms-3\00d58ce0dde97598d6592a089f087019\transformed\play-services-maps-18.1.0\AndroidManifest.xml:40:13-50
+161            android:required="false" />
+161-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\mbach\.gradle\caches\transforms-3\00d58ce0dde97598d6592a089f087019\transformed\play-services-maps-18.1.0\AndroidManifest.xml:41:13-37
+162
+163        <activity
+163-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\mbach\.gradle\caches\transforms-3\ca190f8a09051828aba3acbfbf4ea826\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+164            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+164-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\mbach\.gradle\caches\transforms-3\ca190f8a09051828aba3acbfbf4ea826\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+165            android:exported="false"
+165-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\mbach\.gradle\caches\transforms-3\ca190f8a09051828aba3acbfbf4ea826\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+166            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+166-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\mbach\.gradle\caches\transforms-3\ca190f8a09051828aba3acbfbf4ea826\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+167
+168        <meta-data
+168-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\mbach\.gradle\caches\transforms-3\9cfe1e9564e79edb5497ac8939e3ba5d\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+169            android:name="com.google.android.gms.version"
+169-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\mbach\.gradle\caches\transforms-3\9cfe1e9564e79edb5497ac8939e3ba5d\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+170            android:value="@integer/google_play_services_version" />
+170-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\mbach\.gradle\caches\transforms-3\9cfe1e9564e79edb5497ac8939e3ba5d\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+171
+172        <uses-library
+172-->[androidx.window:window:1.0.0] C:\Users\mbach\.gradle\caches\transforms-3\e2b9b317892b6326ab0ac644cbe8c83a\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+173            android:name="androidx.window.extensions"
+173-->[androidx.window:window:1.0.0] C:\Users\mbach\.gradle\caches\transforms-3\e2b9b317892b6326ab0ac644cbe8c83a\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+174            android:required="false" />
+174-->[androidx.window:window:1.0.0] C:\Users\mbach\.gradle\caches\transforms-3\e2b9b317892b6326ab0ac644cbe8c83a\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+175        <uses-library
+175-->[androidx.window:window:1.0.0] C:\Users\mbach\.gradle\caches\transforms-3\e2b9b317892b6326ab0ac644cbe8c83a\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+176            android:name="androidx.window.sidecar"
+176-->[androidx.window:window:1.0.0] C:\Users\mbach\.gradle\caches\transforms-3\e2b9b317892b6326ab0ac644cbe8c83a\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+177            android:required="false" />
+177-->[androidx.window:window:1.0.0] C:\Users\mbach\.gradle\caches\transforms-3\e2b9b317892b6326ab0ac644cbe8c83a\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+178
+179        <service
+179-->[androidx.room:room-runtime:2.3.0] C:\Users\mbach\.gradle\caches\transforms-3\c076ed82eb7646c1811b6b26f53950ab\transformed\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
+180            android:name="androidx.room.MultiInstanceInvalidationService"
+180-->[androidx.room:room-runtime:2.3.0] C:\Users\mbach\.gradle\caches\transforms-3\c076ed82eb7646c1811b6b26f53950ab\transformed\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
+181            android:directBootAware="true"
+181-->[androidx.room:room-runtime:2.3.0] C:\Users\mbach\.gradle\caches\transforms-3\c076ed82eb7646c1811b6b26f53950ab\transformed\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
+182            android:exported="false" />
+182-->[androidx.room:room-runtime:2.3.0] C:\Users\mbach\.gradle\caches\transforms-3\c076ed82eb7646c1811b6b26f53950ab\transformed\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
+183
+184        <provider
+184-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mbach\.gradle\caches\transforms-3\af6acde656a4c74ca1b9e211148957db\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+185            android:name="androidx.startup.InitializationProvider"
+185-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mbach\.gradle\caches\transforms-3\af6acde656a4c74ca1b9e211148957db\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+186            android:authorities="tn.mbach.warnMe.androidx-startup"
+186-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mbach\.gradle\caches\transforms-3\af6acde656a4c74ca1b9e211148957db\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+187            android:exported="false" >
+187-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mbach\.gradle\caches\transforms-3\af6acde656a4c74ca1b9e211148957db\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+188            <meta-data
+188-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mbach\.gradle\caches\transforms-3\af6acde656a4c74ca1b9e211148957db\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+189                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+189-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mbach\.gradle\caches\transforms-3\af6acde656a4c74ca1b9e211148957db\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+190                android:value="androidx.startup" />
+190-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mbach\.gradle\caches\transforms-3\af6acde656a4c74ca1b9e211148957db\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+191            <meta-data
+191-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mbach\.gradle\caches\transforms-3\63ab57d79ed09ba6007583b6bf415528\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+192                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+192-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mbach\.gradle\caches\transforms-3\63ab57d79ed09ba6007583b6bf415528\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+193                android:value="androidx.startup" />
+193-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mbach\.gradle\caches\transforms-3\63ab57d79ed09ba6007583b6bf415528\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+194        </provider>
+195    </application>
+196
+197</manifest>
