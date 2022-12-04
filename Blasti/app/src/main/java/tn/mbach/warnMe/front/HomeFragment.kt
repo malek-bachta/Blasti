@@ -15,11 +15,14 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import tn.mbach.warnMe.Adapter.moviesAdapter
 import tn.mbach.warnMe.Adapter.EventsAdapter
+import tn.mbach.warnMe.Adapter.ShowsAdapter
 import tn.mbach.warnMe.Data.ShowInfo
 import tn.mbach.warnMe.Models.Events
+import tn.mbach.warnMe.Models.Shows
 import tn.mbach.warnMe.Models.moviesss
 import tn.mbach.warnMe.Network.EventsApi
 import tn.mbach.warnMe.Network.MoviesApi
+import tn.mbach.warnMe.Network.ShowsApi
 import tn.mbach.warnMe.Network.retrofit
 import tn.mbach.warnMe.R
 
@@ -28,7 +31,7 @@ class HomeFragment : Fragment() {
 
 
     private lateinit var RecyclerShow: RecyclerView
-    private lateinit var RecyclerShowAdapter: EventsAdapter
+    private lateinit var RecyclerShowAdapter: ShowsAdapter
     //
     private lateinit var RecyclerClub: RecyclerView
     private lateinit var RecyclerClubAdapter: EventsAdapter
@@ -40,6 +43,7 @@ class HomeFragment : Fragment() {
 
     var postM: ArrayList<moviesss> = ArrayList<moviesss>()
     var postE: ArrayList<Events> = ArrayList<Events>()
+    var postS: ArrayList<Shows> = ArrayList<Shows>()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -56,114 +60,9 @@ class HomeFragment : Fragment() {
         searchView = view.findViewById(R.id.searchViewHome)
 
 
-
-        var listitem: MutableList<ShowInfo> = ArrayList()
-
-        listitem.add(
-            ShowInfo(
-                R.drawable.img_5,
-                "ESPRIT",
-                "EVENT TITLE",
-                "20-05-2022"
-            ),
-        )
-        listitem.add(
-            ShowInfo(
-                R.drawable.img_6,
-                "ESPRIT",
-                "EVENT TITLE",
-                "20-05-2022"
-            ),
-        )
-        listitem.add(
-            ShowInfo(
-                R.drawable.img_7,
-                "ESPRIT",
-                "EVENT TITLE",
-                "20-05-2022"
-            ),
-        )
-        listitem.add(
-            ShowInfo(
-                R.drawable.img_8,
-                "ESPRIT",
-                "EVENT TITLE",
-                "20-05-2022"
-            ),
-        )
-
-        listitem.add(
-            ShowInfo(
-                R.drawable.img_5,
-                "ESPRIT",
-                "EVENT TITLE",
-                "20-05-2022"
-            ),
-        )
-        listitem.add(
-            ShowInfo(
-                R.drawable.img_6,
-                "ESPRIT",
-                "EVENT TITLE",
-                "20-05-2022"
-            ),
-        )
-        listitem.add(
-            ShowInfo(
-                R.drawable.img_7,
-                "ESPRIT",
-                "EVENT TITLE",
-                "20-05-2022"
-            ),
-        )
-        listitem.add(
-            ShowInfo(
-                R.drawable.img_8,
-                "ESPRIT",
-                "EVENT TITLE",
-                "20-05-2022"
-            ),
-        )
-        listitem.add(
-            ShowInfo(
-                R.drawable.img_5,
-                "ESPRIT",
-                "EVENT TITLE",
-                "20-05-2022"
-            ),
-        )
-        listitem.add(
-            ShowInfo(
-                R.drawable.img_6,
-                "ESPRIT",
-                "EVENT TITLE",
-                "20-05-2022"
-            ),
-        )
-        listitem.add(
-            ShowInfo(
-                R.drawable.img_7,
-                "ESPRIT",
-                "EVENT TITLE",
-                "20-05-2022"
-            ),
-        )
-        listitem.add(
-            ShowInfo(
-                R.drawable.img_8,
-                "ESPRIT",
-                "EVENT TITLE",
-                "20-05-2022"
-            ),
-        )
-
-
-
-
-
         RecyclerShow.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        RecyclerShowAdapter = EventsAdapter()
+        RecyclerShowAdapter = ShowsAdapter()
         RecyclerShow.adapter = RecyclerShowAdapter
 
 
@@ -182,7 +81,8 @@ class HomeFragment : Fragment() {
 
         ShowAllMovies()
         ShowAllevents()
-//        println("Sizzzzzzeeeeeeee "+postM.size)
+        ShowAllShows()
+        println("Sizzzzzzeeeeeeee "+postS.size)
 
         OpenSearch()
 
@@ -207,7 +107,7 @@ class HomeFragment : Fragment() {
 //                println("Sizzzzzzeeeeeeee "+postM.size)
                 RecyclermoviesAdapter.notifyDataSetChanged()
 
-                // MoviesList.add(response.body())
+//                 MoviesList.add(response.body())
             }
             override fun onFailure(call: Call<List<moviesss>>, t: Throwable) {
                 println("Message :" + t.stackTrace)
@@ -226,11 +126,11 @@ class HomeFragment : Fragment() {
 
                 println("Body ==== "+response.body().toString())
                 postE = ArrayList(response.body())
-                RecyclerShowAdapter.setData(postE)
-//                println("Sizzzzzzeeeeeeee "+postM.size)
-                RecyclerShowAdapter.notifyDataSetChanged()
+                RecyclerClubAdapter.setData(postE)
+                println("Sizzzzzzeeeeeeee event "+postE.size)
 
-                // MoviesList.add(response.body())
+                RecyclerClubAdapter.notifyDataSetChanged()
+
             }
             override fun onFailure(call: Call<List<Events>>, t: Throwable) {
                 println("Message :" + t.stackTrace)
@@ -239,5 +139,29 @@ class HomeFragment : Fragment() {
         })
     }
 
+
+
+    fun ShowAllShows() {
+        val retrofi: Retrofit = retrofit.getInstance()
+        val service: ShowsApi = retrofi.create(ShowsApi::class.java)
+        val call: Call<List<Shows>> = service.affShows()
+        call.enqueue(object : Callback<List<Shows>> {
+            override fun onResponse(call: Call<List<Shows>>, response: Response<List<Shows>>) {
+
+                println("Body ==== "+response.body().toString())
+                postS = ArrayList(response.body())
+                RecyclerShowAdapter.setData(postS)
+                println("Sizzzzzzeeeeeeee "+postS.size)
+
+                RecyclerShowAdapter.notifyDataSetChanged()
+                // MoviesList.add(response.body())
+
+            }
+            override fun onFailure(call: Call<List<Shows>>, t: Throwable) {
+                println("Message :" + t.stackTrace)
+                Log.d("*", "Opppsss" + t.message)
+            }
+        })
+    }
 
 }

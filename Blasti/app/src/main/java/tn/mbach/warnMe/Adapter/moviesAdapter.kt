@@ -7,8 +7,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
-import tn.mbach.warnMe.Data.moviesInfo
-import tn.mbach.warnMe.Models.Movies
 import tn.mbach.warnMe.Models.moviesss
 import tn.mbach.warnMe.R
 

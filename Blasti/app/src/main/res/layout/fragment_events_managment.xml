@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".back.MoviesManagmentFragment"
-    android:background="@color/black">
+    tools:context=".back.EventsManagmentFragment"
+    android:background="#292929">
+
 
     <TextView
         android:id="@+id/textView3"
@@ -13,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Movies managment"
+        android:text="Event managment"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -111,10 +112,10 @@
         app:layout_constraintTop_toBottomOf="@+id/descriptionin" />
 
     <Button
-        android:id="@+id/addMovie"
+        android:id="@+id/addEvent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Movie"
+        android:text="Add Event"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -128,6 +129,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:textColor="@color/white"/> <!-- spinner mode of a date picker -->
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

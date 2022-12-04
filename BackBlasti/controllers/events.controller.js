@@ -17,7 +17,7 @@ const ShowEvents = (req, res) => {
 const AddEvent = async (req, res, next) => {
   const { title, date, adress, type, cost, description, guest, pAvailable, image } =
     req.body;
-  if (!title || !adress || !type || !cost) {
+  if (!title || !adress || !type ) {
     res.json({ error: "please add all the feilds" });
   }
   const event = await events.findOne({ title: title });

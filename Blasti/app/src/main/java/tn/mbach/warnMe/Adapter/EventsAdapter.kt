@@ -3,12 +3,9 @@ package tn.mbach.warnMe.Adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import tn.mbach.warnMe.Data.ShowInfo
 import tn.mbach.warnMe.Models.Events
-import tn.mbach.warnMe.Models.moviesss
 import tn.mbach.warnMe.R
 
 class EventsAdapter () : RecyclerView.Adapter<EventsAdapter.ShowViewHolder> (){

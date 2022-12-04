@@ -51,7 +51,7 @@ class HomeAdmin : AppCompatActivity() {
             when(it.itemId){
                 R.id.NavHome -> replaceFragment(HomeAdminFragment())
                 R.id.NavMovies -> replaceFragment(MoviesManagmentFragment())
-                R.id.NavUser -> replaceFragment(UserFragment())
+                R.id.NavEvents -> replaceFragment(EventsManagmentFragment())
                 R.id.logout->logout()
             }
             true

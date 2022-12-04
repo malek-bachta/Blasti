@@ -9,8 +9,7 @@ import retrofit2.http.Body;
 import retrofit2.http.GET
 import retrofit2.http.POST;
 import tn.mbach.warnMe.Models.Events
-import tn.mbach.warnMe.Models.Movies
-import tn.mbach.warnMe.Models.moviesss
+
 
 interface EventsApi {
 
