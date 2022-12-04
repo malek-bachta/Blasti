@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#292929"
+   >
+
+    <TextView
+        android:id="@+id/profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="28dp"
+        android:text="Profile"
+        android:textAlignment="textStart"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/profileimg"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/profileimg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="43dp"
+        android:layout_height="41dp"
+        android:layout_alignTop="@+id/MyName"
+        android:layout_alignBottom="@+id/MyName"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/power_off"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+
+
+        <ImageView
+            android:id="@+id/profileimg"
+            android:layout_width="216dp"
+            android:layout_height="153dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintVertical_bias="0.111"
+            app:srcCompat="@drawable/cam" />
+
+    <TextView
+        android:id="@+id/MyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="4dp"
+        android:text="Name"
+        android:textAlignment="textStart"
+        android:textColor="#FDC716"
+        android:textSize="34sp"
+
+
+        app:layout_constraintEnd_toEndOf="@+id/profileimg"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/profileimg"
+        app:layout_constraintTop_toBottomOf="@+id/profileimg" />
+
+    <TextView
+        android:id="@+id/Myemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="user@gmail.com"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/profileimg"
+        app:layout_constraintStart_toStartOf="@+id/profileimg"
+        app:layout_constraintTop_toBottomOf="@+id/MyName" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardprofile"
+        android:layout_width="400dp"
+        android:layout_height="130dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Myemail"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageprofile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_4"
+
+
+            />
+
+        <TextView
+            android:id="@+id/updateProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Manage Profile"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="35dp" />
+    </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
