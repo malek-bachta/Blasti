@@ -5,12 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 import tn.mbach.warnMe.Data.clubbInfo
 import tn.mbach.warnMe.R
 
-class ClubbAdapter (var ClubList : ArrayList<clubbInfo>) : RecyclerView.Adapter<ClubbAdapter.ClubViewHolder> (){
+class ShowsAdapter (var ClubList : ArrayList<clubbInfo>) : RecyclerView.Adapter<ShowsAdapter.ClubViewHolder> (){
 
     class ClubViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

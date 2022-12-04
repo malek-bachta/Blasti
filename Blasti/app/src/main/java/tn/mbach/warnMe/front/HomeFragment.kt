@@ -16,7 +16,9 @@ import retrofit2.Retrofit
 import tn.mbach.warnMe.Adapter.moviesAdapter
 import tn.mbach.warnMe.Adapter.EventsAdapter
 import tn.mbach.warnMe.Data.ShowInfo
+import tn.mbach.warnMe.Models.Events
 import tn.mbach.warnMe.Models.moviesss
+import tn.mbach.warnMe.Network.EventsApi
 import tn.mbach.warnMe.Network.MoviesApi
 import tn.mbach.warnMe.Network.retrofit
 import tn.mbach.warnMe.R
@@ -27,14 +29,17 @@ class HomeFragment : Fragment() {
 
     private lateinit var RecyclerShow: RecyclerView
     private lateinit var RecyclerShowAdapter: EventsAdapter
+    //
     private lateinit var RecyclerClub: RecyclerView
     private lateinit var RecyclerClubAdapter: EventsAdapter
+    //
     private lateinit var searchView: SearchView
     //
     private lateinit var Recyclermovies: RecyclerView
     private lateinit var RecyclermoviesAdapter: moviesAdapter
 
     var postM: ArrayList<moviesss> = ArrayList<moviesss>()
+    var postE: ArrayList<Events> = ArrayList<Events>()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -156,18 +161,16 @@ class HomeFragment : Fragment() {
 
 
 
-
-        RecyclerShowAdapter = EventsAdapter(listitem as ArrayList<ShowInfo>)
-        RecyclerShow.adapter = RecyclerShowAdapter
         RecyclerShow.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        RecyclerShowAdapter = EventsAdapter()
+        RecyclerShow.adapter = RecyclerShowAdapter
 
 
-        RecyclerClubAdapter = EventsAdapter(listitem as ArrayList<ShowInfo>)
-        RecyclerClub.adapter = RecyclerClubAdapter
         RecyclerClub.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-
+        RecyclerClubAdapter = EventsAdapter()
+        RecyclerClub.adapter = RecyclerClubAdapter
 
        // RecyclermoviesAdapter = showAdapter(listitem as ArrayList<ShowInfo>)
 
@@ -177,9 +180,9 @@ class HomeFragment : Fragment() {
         RecyclermoviesAdapter = moviesAdapter()
         Recyclermovies.adapter = RecyclermoviesAdapter
 
-        ShowAllPostRecomm()
-
-        println("Sizzzzzzeeeeeeee "+postM.size)
+        ShowAllMovies()
+        ShowAllevents()
+//        println("Sizzzzzzeeeeeeee "+postM.size)
 
         OpenSearch()
 
@@ -191,7 +194,7 @@ class HomeFragment : Fragment() {
         }
     }
 
-    fun ShowAllPostRecomm() {
+    fun ShowAllMovies() {
         val retrofi: Retrofit = retrofit.getInstance()
         val service: MoviesApi = retrofi.create(MoviesApi::class.java)
         val call: Call<List<moviesss>> = service.showmovies()
@@ -201,7 +204,7 @@ class HomeFragment : Fragment() {
                 println("Body ==== "+response.body().toString())
                 postM = ArrayList(response.body())
                 RecyclermoviesAdapter.setData(postM)
-                println("Sizzzzzzeeeeeeee "+postM.size)
+//                println("Sizzzzzzeeeeeeee "+postM.size)
                 RecyclermoviesAdapter.notifyDataSetChanged()
 
                 // MoviesList.add(response.body())
@@ -212,5 +215,29 @@ class HomeFragment : Fragment() {
             }
         })
     }
+
+
+    fun ShowAllevents() {
+        val retrofi: Retrofit = retrofit.getInstance()
+        val service: EventsApi = retrofi.create(EventsApi::class.java)
+        val call: Call<List<Events>> = service.showEvents()
+        call.enqueue(object : Callback<List<Events>> {
+            override fun onResponse(call: Call<List<Events>>, response: Response<List<Events>>) {
+
+                println("Body ==== "+response.body().toString())
+                postE = ArrayList(response.body())
+                RecyclerShowAdapter.setData(postE)
+//                println("Sizzzzzzeeeeeeee "+postM.size)
+                RecyclerShowAdapter.notifyDataSetChanged()
+
+                // MoviesList.add(response.body())
+            }
+            override fun onFailure(call: Call<List<Events>>, t: Throwable) {
+                println("Message :" + t.stackTrace)
+                Log.d("*", "Opppsss" + t.message)
+            }
+        })
+    }
+
 
 }

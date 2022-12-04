@@ -15,7 +15,7 @@ const ShowEvents = (req, res) => {
 
 //addevent
 const AddEvent = async (req, res, next) => {
-  const { title, date, adress, type, cost, guest, pAvailable, image } =
+  const { title, date, adress, type, cost, description, guest, pAvailable, image } =
     req.body;
   if (!title || !adress || !type || !cost) {
     res.json({ error: "please add all the feilds" });
@@ -31,6 +31,7 @@ const AddEvent = async (req, res, next) => {
         adress,
         type,
         cost,
+        description,
         guest,
         pAvailable,
         image,
@@ -63,7 +64,7 @@ const deleteEvent = (req, res) => {
 //Updateevent
 const UpdateEvent = (req, res) => {
   const { _id } = req.params;
-  const { title, date, adress, type, cost, guest, pAvailable, image } =
+  const { title, date, adress, type, cost, description, guest, pAvailable, image } =
     req.body;
   if (!title || !adress || !type || !cost) {
     res.json({ error: "please add all the feilds" });
@@ -76,6 +77,7 @@ const UpdateEvent = (req, res) => {
       adress,
       type,
       cost,
+      description,
       guest,
       pAvailable,
       image,

@@ -3,7 +3,7 @@ package tn.mbach.warnMe.Models
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-class Movies {
+class Shows {
     @SerializedName("_id")
     @Expose
     internal val id: String? = null
@@ -20,10 +20,6 @@ class Movies {
     @Expose
     internal val genre: String? = null
 
-    @SerializedName("language")
-    @Expose
-    internal val language: String? = null
-
     @SerializedName("description")
     @Expose
     internal val description: String? = null
@@ -32,27 +28,11 @@ class Movies {
     @Expose
     internal val image: String? = null
 
-    @SerializedName("video")
+    @SerializedName("place")
     @Expose
-    internal val video: String? = null
+    internal val place: String? = null
 
-    @SerializedName("rating")
+    @SerializedName("actor")
     @Expose
-    internal val rating: String? = null
-
-    @SerializedName("duration")
-    @Expose
-    internal val duration: String? = null
-
-    @SerializedName("director")
-    @Expose
-    internal val director: String? = null
-
-    @SerializedName("writer")
-    @Expose
-    internal val writer: String? = null
-
-    @SerializedName("production")
-    @Expose
-    internal val production: String? = null
+    internal val actor: String? = null
 }
