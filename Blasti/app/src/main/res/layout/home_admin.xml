@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout"
     tools:context=".back.HomeAdmin"
-    android:background="#292929">
+    android:background="@color/black">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -22,29 +22,12 @@
             app:layout_constraintTop_toTopOf="parent">
 
         </FrameLayout>
-        <!--   frame layout          android:layout_height="837dp"
-                    app:layout_constraintTop_toBottomOf="@+id/searchViewHomeadmin">
--->
-
-        <!--<SearchView
-            android:id="@+id/searchViewHomeadmin"
-            android:layout_width="361dp"
-            android:layout_height="46dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginEnd="2dp"
-            android:background="@drawable/roundedcadre"
-            android:iconifiedByDefault="true"
-            android:queryHint="Search"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.51"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="#292929"
+        android:background="#0A0A0A"
         app:menu="@menu/nav_menu"
         app:headerLayout="@layout/nav_header"
         android:layout_gravity="start"

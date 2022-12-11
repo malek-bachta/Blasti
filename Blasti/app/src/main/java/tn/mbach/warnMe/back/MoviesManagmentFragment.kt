@@ -81,16 +81,16 @@ class MoviesManagmentFragment : Fragment() {
 
     fun DoActionaddmovie() {
         gettextwathceraddmovie()
-//        btnGet.setOnClickListener { tvw.setText("Selected Date: " + picker.dayOfMonth + "/" + (picker.month + 1) + "/" + picker.year) }
         btnGet.setOnClickListener {
-            println("bbbbbbbbbbbbbbbbbbbbbbbb")
             if (!Validator.VerifisEmpty(txtTitle,txttitleLayout) or !Validator.VerifisEmpty(txtGenre,txtgenreLayout)
                 or !Validator.VerifisEmpty(txtDescription,txtdescriptiondLayout)) {
                 println("Something is Empty!")
                 return@setOnClickListener
             } else {
                 println("let's Go!!!!!")
-                viewModel.addMovie(txtTitle,txtGenre,txtDescription,requireContext(),requireActivity())
+                val dataTime ="" + picker.dayOfMonth + "/" + (picker.month + 1) + "/" + picker.year
+                viewModel.addMovie(txtTitle,txtGenre,txtDescription,dataTime,requireContext(),requireActivity())
+
             }
         }
     }

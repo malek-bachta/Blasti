@@ -16,6 +16,7 @@ import tn.mbach.warnMe.Data.RememberEmail
 import tn.mbach.warnMe.Data.RememberPassword
 import tn.mbach.warnMe.Login
 import tn.mbach.warnMe.R
+import tn.mbach.warnMe.front.Home
 
 class HomeAdmin : AppCompatActivity() {
 
@@ -52,7 +53,10 @@ class HomeAdmin : AppCompatActivity() {
                 R.id.NavHome -> replaceFragment(HomeAdminFragment())
                 R.id.NavMovies -> replaceFragment(MoviesManagmentFragment())
                 R.id.NavEvents -> replaceFragment(EventsManagmentFragment())
+                R.id.NavShows -> replaceFragment(ShowsManagmentFragment())
                 R.id.logout->logout()
+                R.id.gotofront ->gotohome()
+
             }
             true
         }
@@ -91,6 +95,12 @@ class HomeAdmin : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+    fun gotohome(){
+        val intent = Intent(this, Home::class.java).apply {}
+        startActivity(intent)
+        finish()
+    }
 
 
 }

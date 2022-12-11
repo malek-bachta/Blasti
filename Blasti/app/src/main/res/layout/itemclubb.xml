@@ -18,59 +18,55 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#595959"
-        >
+        android:background="#595959">
 
         <ImageView
             android:id="@+id/Clubimageitem"
-            android:layout_width="194dp"
-            android:layout_height="98dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/img_1"
-            android:scaleType="centerCrop"
-
-            />
+            app:srcCompat="@drawable/img_1" />
 
 
         <TextView
             android:id="@+id/LocationClubitem"
             android:layout_width="116dp"
             android:layout_height="23dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="116dp"
             android:layout_weight="1"
             android:text="Location"
             android:textColor="#FDC716"
-            android:textStyle="bold"
 
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/Clubimageitem"
-            app:layout_constraintTop_toBottomOf="@+id/Clubimageitem" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/TitleClubitem"
             android:layout_width="116dp"
             android:layout_height="23dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="36dp"
             android:layout_weight="1"
             android:text="Title Club"
             android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="@+id/Clubimageitem"
-            app:layout_constraintTop_toBottomOf="@+id/Clubimageitem" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LocationClubitem" />
 
         <TextView
             android:id="@+id/dateClubitem"
             android:layout_width="116dp"
             android:layout_height="23dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="116dp"
             android:layout_weight="1"
             android:text="date Club"
             android:textAlignment="center"
             android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="@+id/Clubimageitem"
-            app:layout_constraintTop_toBottomOf="@+id/Clubimageitem" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

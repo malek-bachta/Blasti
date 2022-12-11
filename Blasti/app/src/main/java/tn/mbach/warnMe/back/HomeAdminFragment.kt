@@ -1,34 +1,32 @@
 package tn.mbach.warnMe.back
 
+import android.app.Activity
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
+import tn.mbach.warnMe.Data.*
+import tn.mbach.warnMe.Login
 import tn.mbach.warnMe.R
+import tn.mbach.warnMe.front.EditProfile
+import tn.mbach.warnMe.front.REQUEST_CODE
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+val REQUEST_CODE = 100
 
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeAdminFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class HomeAdminFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var MyName: TextView
+    private lateinit var Myemail: TextView
+    private lateinit var MySharedPref: SharedPreferences
+    private lateinit var imgUser : ImageView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,23 +36,46 @@ class HomeAdminFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_home_admin, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeAdminFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HomeAdminFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        MyName = requireView().findViewById(R.id.Name)
+        Myemail = requireView().findViewById(R.id.Email)
+        imgUser = requireView().findViewById(R.id.profileimgb)
+
+
+
+        //
+        MySharedPref = requireContext().getSharedPreferences(PREF_NAME, AppCompatActivity.MODE_PRIVATE);
+        val nameUser = MySharedPref.getString(NAME, null)
+        val emailUser = MySharedPref.getString(EMAIL, null)
+
+        MyName.text = nameUser
+        Myemail.text = emailUser
+
+
+        imgUser.setOnClickListener { openGalleryForImage() }
+
     }
+
+
+
+
+    fun openGalleryForImage()
+    {
+        val intent = Intent(Intent.ACTION_PICK)
+        intent.type = "image/*"
+        startActivityForResult(intent, REQUEST_CODE)
+    }
+
+    override  fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?)
+    {
+        //val imgUser : ImageView = findViewById(R.id.profileimg)
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_CODE){
+            imgUser.setImageURI(data?.data) // handle chosen image
+            imgUser.setTag("imageHasChanged");
+        }
+
+    }
+
+
 }

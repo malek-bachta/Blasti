@@ -41,7 +41,7 @@ class EventsViewModel : ViewModel() {
         txttitle: TextInputEditText,
         txtgenre: TextInputEditText,
         txtdescription: TextInputEditText,
-//        txtdate: TextInputEditText,
+        date: String,
         context: Context,
         Activity: Activity
     ) {
@@ -49,7 +49,7 @@ class EventsViewModel : ViewModel() {
         map["title"] = txttitle.text.toString()
         map["adress"] = txtgenre.text.toString()
         map["type"] = txtdescription.text.toString()
-//        map["date"] = txtdate.text.toString()
+        map["date"] = date
         service.addEvent(map).enqueue(object : Callback<java.util.HashMap<String, String>> {
             override fun onResponse(call: Call<java.util.HashMap<String, String>>, response: Response<java.util.HashMap<String, String>>) {
                 //

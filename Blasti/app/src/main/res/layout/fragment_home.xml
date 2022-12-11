@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".front.HomeFragment"
 
-    android:background="#292929">
+    android:background="@color/black">
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -175,6 +175,7 @@
                     app:layout_constraintHorizontal_bias="0.51"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/homeTitle"/>
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

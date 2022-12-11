@@ -15,9 +15,11 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import tn.mbach.warnMe.R
 import tn.mbach.warnMe.Utils.Validator
-import tn.mbach.warnMe.ViewModel.EventsViewModel
+import tn.mbach.warnMe.ViewModel.ShowsViewModel
 
-class EventsManagmentFragment : Fragment() {
+
+class ShowsManagmentFragment : Fragment() {
+    //
     private lateinit var txttitleLayout: TextInputLayout
     private lateinit var txtgenreLayout: TextInputLayout
     private lateinit var txtdescriptiondLayout: TextInputLayout
@@ -25,14 +27,14 @@ class EventsManagmentFragment : Fragment() {
     private lateinit var txtTitle: TextInputEditText
     private lateinit var txtGenre: TextInputEditText
     private lateinit var txtDescription: TextInputEditText
+
     //
     private  lateinit var picker : DatePicker
     private lateinit var btnGet : Button
-    private lateinit var tvw : TextView
     //
     val Validator = Validator()
 
-    private val viewModel by viewModels<EventsViewModel>()
+    private val     viewModel by viewModels<ShowsViewModel>()
 
 
 
@@ -41,7 +43,7 @@ class EventsManagmentFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_events_managment, container, false)
+        return inflater.inflate(R.layout.fragment_shows_managment, container, false)
 
 
 
@@ -49,16 +51,15 @@ class EventsManagmentFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        tvw = view.findViewById(R.id.date)
         picker = view.findViewById(R.id.datepick)
-        btnGet = view.findViewById(R.id.addEvent)
+        btnGet = view.findViewById(R.id.addShow)
 
 /*
         btnGet.setOnClickListener { tvw.setText("Selected Date: " + picker.dayOfMonth + "/" + (picker.month + 1) + "/" + picker.year) }
 */
 
         initView()
-        DoActionaddevent()
+        DoActionaddshow()
     }
 
     fun initView()
@@ -75,8 +76,8 @@ class EventsManagmentFragment : Fragment() {
 
     }
 
-    fun DoActionaddevent() {
-        gettextwathceraddevent()
+    fun DoActionaddshow() {
+        gettextwathceraddshow()
 //        btnGet.setOnClickListener { tvw.setText("Selected Date: " + picker.dayOfMonth + "/" + (picker.month + 1) + "/" + picker.year) }
         btnGet.setOnClickListener {
             println("bbbbbbbbbbbbbbbbbbbbbbbb")
@@ -87,12 +88,12 @@ class EventsManagmentFragment : Fragment() {
             } else {
                 println("let's Go!!!!!")
                 val dataTime ="" + picker.dayOfMonth + "/" + (picker.month + 1) + "/" + picker.year
-                viewModel.addEvent(txtTitle,txtGenre,txtDescription,dataTime,requireContext(),requireActivity())
+                viewModel.addShow(txtTitle,txtGenre,txtDescription,dataTime,requireContext(),requireActivity())
             }
         }
     }
 
-    private fun gettextwathceraddevent() {
+    private fun gettextwathceraddshow() {
         txtTitle.addTextChangedListener(TitletxtWatcher)
         txtGenre.addTextChangedListener(GenretxtWatcher)
         txtDescription.addTextChangedListener(DescriptiontxtWatcher)
@@ -122,4 +123,6 @@ class EventsManagmentFragment : Fragment() {
             Validator.VerifisEmpty(txtDescription,txtdescriptiondLayout)
         }
     }
+
+
 }

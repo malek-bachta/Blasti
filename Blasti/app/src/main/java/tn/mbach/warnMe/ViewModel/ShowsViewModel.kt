@@ -6,28 +6,25 @@ import android.content.SharedPreferences
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.android.material.textfield.TextInputEditText
-import com.google.gson.JsonObject
-import com.google.gson.JsonParser
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
-import tn.mbach.warnMe.Models.moviesss
-import tn.mbach.warnMe.Network.MoviesApi
+import tn.mbach.warnMe.Models.Shows
+import tn.mbach.warnMe.Network.ShowsApi
 import tn.mbach.warnMe.Network.retrofit
 import tn.mbach.warnMe.Utils.CustomToast
 import tn.mbach.warnMe.Utils.ReadyFunction
-import tn.mbach.warnMe.back.MoviesManagmentFragment
 
-class MoviesViewModel : ViewModel() {
+class ShowsViewModel : ViewModel() {
     val retrofi: Retrofit = retrofit.getInstance()
-    val service: MoviesApi = retrofi.create(MoviesApi::class.java)
+    val service: ShowsApi = retrofi.create(ShowsApi::class.java)
 
 
     val ReadyFunction = ReadyFunction()
 
 
-    private var moviesList: MutableLiveData<List<moviesss>>? = null
+    private var moviesList: MutableLiveData<List<Shows>>? = null
 
     private val statusMessage = MutableLiveData<String>()
     private lateinit var MySharedPref: SharedPreferences
@@ -40,11 +37,11 @@ class MoviesViewModel : ViewModel() {
         return moviesList
     }*/
 
-    fun addMovie(
+    fun addShow(
         txttitle: TextInputEditText,
         txtgenre: TextInputEditText,
         txtdescription: TextInputEditText,
-        date: String,
+        date: String ,
         context: Context,
         Activity: Activity
     ) {
@@ -53,13 +50,12 @@ class MoviesViewModel : ViewModel() {
         map["genre"] = txtgenre.text.toString()
         map["description"] = txtdescription.text.toString()
         map["date"] = date
-        service.addmovie(map).enqueue(object : Callback<java.util.HashMap<String, String>> {
+        service.addShow(map).enqueue(object : Callback<java.util.HashMap<String, String>> {
             override fun onResponse(call: Call<java.util.HashMap<String, String>>, response: Response<java.util.HashMap<String, String>>) {
                 //
                 println(response)
                 println(response.body()!!.get("message"))
                 println(response.message())
-                ReadyFunction.GoToActivityHome(context, Activity) //GoTo Page Home
    /*             val Body = response.body().toString()
                 var json = JsonParser()
                 var Data = json.parse(Body).asJsonObject

@@ -24,7 +24,7 @@ const AddShow = async (req, res, next) => {
     place,
     actors,
   } = req.body;
-  if (!title || !date || !genre) {
+  if (!title || !description || !genre) {
     res.json({ error: "please add all the fields" });
   }
   const show = await shows.findOne({ title: title });
