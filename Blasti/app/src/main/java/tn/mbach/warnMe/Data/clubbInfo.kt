@@ -1,8 +1,8 @@
 package tn.mbach.warnMe.Data
 
-data class clubbInfo(
-    var ClubImg : Int,
-    var ClubLocation : String,
-    var ClubTitle : String,
-    var ClubDate : String
+data class eventInfo(
+    var eventImg : Int,
+    var eventLocation : String,
+    var eventTitle : String,
+    var eventDate : String
 )

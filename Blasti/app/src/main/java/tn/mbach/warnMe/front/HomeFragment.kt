@@ -33,8 +33,8 @@ class HomeFragment : Fragment() {
     private lateinit var RecyclerShow: RecyclerView
     private lateinit var RecyclerShowAdapter: ShowsAdapter
     //
-    private lateinit var RecyclerClub: RecyclerView
-    private lateinit var RecyclerClubAdapter: EventsAdapter
+    private lateinit var Recyclerevent: RecyclerView
+    private lateinit var RecyclereventAdapter: EventsAdapter
     //
     private lateinit var searchView: SearchView
     //
@@ -55,28 +55,28 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         RecyclerShow = view.findViewById(R.id.RecyclerShow)
-        RecyclerClub = view.findViewById(R.id.RecyclerClubbing)
+        Recyclerevent = view.findViewById(R.id.Recyclerevents)
         Recyclermovies = view.findViewById(R.id.RecyclerMovies)
         searchView = view.findViewById(R.id.searchViewHome)
 
 
         RecyclerShow.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        RecyclerShowAdapter = ShowsAdapter()
+        RecyclerShowAdapter = ShowsAdapter(requireContext())
         RecyclerShow.adapter = RecyclerShowAdapter
 
 
-        RecyclerClub.layoutManager =
+        Recyclerevent.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        RecyclerClubAdapter = EventsAdapter()
-        RecyclerClub.adapter = RecyclerClubAdapter
+        RecyclereventAdapter = EventsAdapter(requireContext())
+        Recyclerevent.adapter = RecyclereventAdapter
 
        // RecyclermoviesAdapter = showAdapter(listitem as ArrayList<ShowInfo>)
 
 
         Recyclermovies.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        RecyclermoviesAdapter = moviesAdapter()
+        RecyclermoviesAdapter = moviesAdapter(requireContext())
         Recyclermovies.adapter = RecyclermoviesAdapter
 
         ShowAllMovies()
@@ -126,10 +126,10 @@ class HomeFragment : Fragment() {
 
                 println("Body ==== "+response.body().toString())
                 postE = ArrayList(response.body())
-                RecyclerClubAdapter.setData(postE)
+                RecyclereventAdapter.setData(postE)
                 println("Sizzzzzzeeeeeeee event "+postE.size)
 
-                RecyclerClubAdapter.notifyDataSetChanged()
+                RecyclereventAdapter.notifyDataSetChanged()
 
             }
             override fun onFailure(call: Call<List<Events>>, t: Throwable) {

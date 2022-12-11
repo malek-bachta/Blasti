@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".front.HomeFragment"
+    android:background="#292929"
+    >
+
+    <TextView
+        android:id="@+id/notificationtit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="28dp"
+        android:text="Notifications"
+        android:textAlignment="textStart"
+        android:textColor="#FDC716"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardreservation"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/cardreservation"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardreservation"
+        android:layout_width="400dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="80dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notificationtit"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageReservqtion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_2"
+            android:scaleType="centerCrop"
+
+
+            />
+
+        <TextView
+            android:id="@+id/reservation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Réservations"
+            android:layout_gravity="center"
+            android:textSize="35dp"
+            android:textStyle="bold"
+
+            android:textColor="@color/white"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardtickets"
+        android:layout_width="400dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="6dp"
+        app:cardCornerRadius="15dp"
+
+        app:layout_constraintEnd_toEndOf="@+id/cardreservation"
+        app:layout_constraintStart_toStartOf="@+id/cardreservation"
+        app:layout_constraintTop_toBottomOf="@+id/cardreservation"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageTicket"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_3"
+            android:scaleType="centerCrop"
+
+            />
+
+        <TextView
+            android:id="@+id/ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tickets"
+            android:layout_gravity="center"
+            android:textSize="35dp"
+            android:textStyle="bold"
+
+            android:textColor="@color/white"
+
+
+
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

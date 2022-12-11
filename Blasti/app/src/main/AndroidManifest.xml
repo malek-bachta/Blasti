@@ -17,8 +17,23 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".front.ShowDetail"
+            android:name=".ShowsDetail"
             android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".front.EventDetail"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".front.ShowDetail"
+            android:exported="false"
+            android:theme="@style/Theme.warnMe.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

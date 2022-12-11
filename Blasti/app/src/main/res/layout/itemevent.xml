@@ -21,7 +21,7 @@
         android:background="#595959">
 
         <ImageView
-            android:id="@+id/Clubimageitem"
+            android:id="@+id/eventimageitem"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
@@ -34,7 +34,7 @@
 
 
         <TextView
-            android:id="@+id/LocationClubitem"
+            android:id="@+id/Titleeventitem"
             android:layout_width="116dp"
             android:layout_height="23dp"
             android:layout_marginTop="116dp"
@@ -43,26 +43,26 @@
             android:textColor="#FDC716"
 
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/Clubimageitem"
+            app:layout_constraintStart_toStartOf="@+id/eventimageitem"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/TitleClubitem"
+            android:id="@+id/DescriptioneventItem"
             android:layout_width="116dp"
             android:layout_height="23dp"
             android:layout_weight="1"
-            android:text="Title Club"
+            android:text="Title event"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/LocationClubitem" />
+            app:layout_constraintTop_toBottomOf="@+id/Titleeventitem" />
 
         <TextView
-            android:id="@+id/dateClubitem"
+            android:id="@+id/dateeventitem"
             android:layout_width="116dp"
             android:layout_height="23dp"
             android:layout_marginTop="116dp"
             android:layout_weight="1"
-            android:text="date Club"
+            android:text="date event"
             android:textAlignment="center"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"

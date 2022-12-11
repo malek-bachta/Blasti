@@ -1,17 +1,21 @@
 package tn.mbach.warnMe.Adapter
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.RecyclerView
-import tn.mbach.warnMe.Data.clubbInfo
+import tn.mbach.warnMe.Data.eventInfo
 import tn.mbach.warnMe.Models.Shows
 import tn.mbach.warnMe.Models.moviesss
 import tn.mbach.warnMe.R
+import tn.mbach.warnMe.front.MovieDetail
 
-class ShowsAdapter () : RecyclerView.Adapter<ShowsAdapter.ShowViewHolder> (){
+class ShowsAdapter (var context: Context) : RecyclerView.Adapter<ShowsAdapter.ShowViewHolder> (){
 
     var DataList = mutableListOf<Shows>()
     internal fun setData(showsArray : ArrayList<Shows>)
@@ -39,6 +43,20 @@ class ShowsAdapter () : RecyclerView.Adapter<ShowsAdapter.ShowViewHolder> (){
         holder.ShowLocation.text = currentItem.title
         holder.ShowTitle.text = currentItem.description
         holder.ShowDate.text = currentItem.date
+
+        holder.itemView.setOnClickListener {
+            val preferences = PreferenceManager.getDefaultSharedPreferences(context)
+            val editor = preferences.edit()
+            editor.putString("moviesDescription", currentItem.description)
+            editor.putString("moviesTitle", currentItem.title)
+            editor.putString("moviesDate", currentItem.date)
+            editor.apply()  //Save Data
+//            println("Ratteeeeeeeeeeeee "+data.getRate())
+            ///
+//            t7ot fuction thezk lel page te3 details
+            val intent = Intent(context, MovieDetail::class.java)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount() = DataList.size
