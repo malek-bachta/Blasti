@@ -22,8 +22,8 @@
 
         <ImageView
             android:id="@+id/eventimageitem"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="231dp"
+            android:layout_height="165dp"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
 
@@ -35,37 +35,29 @@
 
         <TextView
             android:id="@+id/Titleeventitem"
-            android:layout_width="116dp"
-            android:layout_height="23dp"
-            android:layout_marginTop="116dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
             android:layout_weight="1"
             android:text="Location"
-            android:textColor="#FDC716"
 
+            android:textColor="#FFFFFF"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/eventimageitem"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/DescriptioneventItem"
-            android:layout_width="116dp"
-            android:layout_height="23dp"
-            android:layout_weight="1"
-            android:text="Title event"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Titleeventitem" />
-
-        <TextView
             android:id="@+id/dateeventitem"
-            android:layout_width="116dp"
-            android:layout_height="23dp"
-            android:layout_marginTop="116dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="144dp"
             android:layout_weight="1"
             android:text="date event"
-            android:textAlignment="center"
+            android:textAlignment="viewStart"
             android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/eventimageitem"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

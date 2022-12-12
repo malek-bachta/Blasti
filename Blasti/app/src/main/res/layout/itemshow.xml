@@ -35,11 +35,12 @@
             android:id="@+id/Locationshowitem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="119dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
             android:layout_weight="1"
-            android:text="Location"
-            android:textColor="#FDC716"
+            android:text="SHOW"
 
+            android:textColor="#FFFFFF"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/showimageitem" />
@@ -48,25 +49,14 @@
             android:id="@+id/dateshowitem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="119dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="148dp"
             android:layout_weight="1"
             android:text="date show"
             android:textAlignment="center"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/showimageitem"
             app:layout_constraintTop_toTopOf="@+id/showimageitem" />
-
-        <TextView
-            android:id="@+id/Titleshowitem"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="97dp"
-            android:layout_weight="1"
-            android:text="Title show"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/showimageitem" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
