@@ -157,13 +157,13 @@ class HomeFragment : Fragment() {
 
 
 
-        RecyclerShowAdapter = EventsAdapter(listitem as ArrayList<ShowInfo>)
+        RecyclerShowAdapter = EventsAdapter()
         RecyclerShow.adapter = RecyclerShowAdapter
         RecyclerShow.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
 
-        RecyclerClubAdapter = EventsAdapter(listitem as ArrayList<ShowInfo>)
+        RecyclerClubAdapter = EventsAdapter()
         RecyclerClub.adapter = RecyclerClubAdapter
         RecyclerClub.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
