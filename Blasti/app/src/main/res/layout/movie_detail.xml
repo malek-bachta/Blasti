@@ -7,74 +7,254 @@
     tools:context=".front.MovieDetail"
     android:background="@color/black">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="413dp"
-        android:layout_height="270dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img"
-        android:scaleType="centerCrop"
-
-        android:background="@color/black"/>
-
-    <TextView
-        android:id="@+id/textDetailTtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="title"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:textColor="#ffffffff"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/textdetailDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="date"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:textColor="#ffffffff"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDetailTtitle" />
-
-    <TextView
-        android:id="@+id/textdetailDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:text="description"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:textColor="#ffffffff"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textdetailDate" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="47dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/like"
-        app:layout_constraintStart_toEndOf="@+id/textdetailDescription"
-        app:layout_constraintTop_toTopOf="@+id/textdetailDescription" />
-
-    <Button
-        android:id="@+id/button2"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="47dp"
-        android:layout_marginTop="12dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="769dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="413dp"
+                            android:layout_height="270dp"
+                            android:background="@color/black"
+                            android:scaleType="centerCrop"
+
+                            app:srcCompat="@drawable/img" />
+
+                        <Button
+                            android:id="@+id/favourite10"
+                            android:layout_width="36dp"
+                            android:layout_height="34dp"
+                            android:layout_marginTop="220dp"
+                            android:layout_marginEnd="16dp"
+                            android:background="@drawable/like"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:text="Reservation"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textdetailDescription6"
+                    app:layout_constraintVertical_bias="0.853" />
+
+                <Button
+                    android:id="@+id/favourite11"
+                    android:layout_width="35dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/ic_moviee"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+                <Button
+                    android:id="@+id/favourite12"
+                    android:layout_width="35dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_calendar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/favourite11" />
+
+                <Button
+                    android:id="@+id/favourite13"
+                    android:layout_width="35dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_type"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/favourite12" />
+
+                <Button
+                    android:id="@+id/favourite14"
+                    android:layout_width="35dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_prod"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/favourite15" />
+
+                <Button
+                    android:id="@+id/favourite15"
+                    android:layout_width="35dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_description"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/favourite13" />
+
+                <Button
+                    android:id="@+id/favourite16"
+                    android:layout_width="35dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_langue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/favourite14" />
+
+                <Button
+                    android:id="@+id/favourite17"
+                    android:layout_width="35dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_rating"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/favourite16" />
+
+                <Button
+                    android:id="@+id/favourite25"
+                    android:layout_width="35dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/ic_duration"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="649dp" />
+
+                <TextView
+                    android:id="@+id/textDetailTtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="44dp"
+                    android:text="Title"
+                    android:textColor="#ffffffff"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.082"
+                    app:layout_constraintStart_toEndOf="@+id/favourite11"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+                <TextView
+                    android:id="@+id/textdetailDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Date"
+                    android:textColor="#ffffffff"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.082"
+                    app:layout_constraintStart_toEndOf="@+id/favourite12"
+                    app:layout_constraintTop_toBottomOf="@+id/textDetailTtitle" />
+
+                <TextView
+                    android:id="@+id/textdetailDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Description"
+                    android:textColor="#ffffffff"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.103"
+                    app:layout_constraintStart_toEndOf="@+id/favourite15"
+                    app:layout_constraintTop_toBottomOf="@+id/textdetailDescription2" />
+
+                <TextView
+                    android:id="@+id/textdetailDescription2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Genre"
+                    android:textColor="#ffffffff"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.086"
+                    app:layout_constraintStart_toEndOf="@+id/favourite13"
+                    app:layout_constraintTop_toBottomOf="@+id/textdetailDate" />
+
+                <TextView
+                    android:id="@+id/textdetailDescription3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Production"
+                    android:textColor="#ffffffff"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.101"
+                    app:layout_constraintStart_toEndOf="@+id/favourite14"
+                    app:layout_constraintTop_toBottomOf="@+id/textdetailDescription" />
+
+                <TextView
+                    android:id="@+id/textdetailDescription4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Language"
+                    android:textColor="#ffffffff"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.097"
+                    app:layout_constraintStart_toEndOf="@+id/favourite16"
+                    app:layout_constraintTop_toBottomOf="@+id/textdetailDescription3" />
+
+                <TextView
+                    android:id="@+id/textdetailDescription5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Rating"
+                    android:textColor="#ffffffff"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.087"
+                    app:layout_constraintStart_toEndOf="@+id/favourite17"
+                    app:layout_constraintTop_toBottomOf="@+id/textdetailDescription4" />
+
+                <TextView
+                    android:id="@+id/textdetailDescription6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Duration"
+                    android:textColor="#ffffffff"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.093"
+                    app:layout_constraintStart_toEndOf="@+id/favourite25"
+                    app:layout_constraintTop_toBottomOf="@+id/textdetailDescription5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
