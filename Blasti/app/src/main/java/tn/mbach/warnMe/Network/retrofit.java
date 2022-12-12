@@ -20,7 +20,7 @@ public class retrofit {
                 .build();
         //////////////////////////////////////////////////////////////
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.170.151:9090/")
+                .baseUrl("http://192.168.1.51:9090/")
                 .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();

@@ -4,9 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import tn.mbach.warnMe.R
 
-class ShowDetail : AppCompatActivity() {
+
+class ReserveMovie : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.show_detail)
+        setContentView(R.layout.reserve_movie)
     }
 }
