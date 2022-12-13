@@ -105,7 +105,7 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="309dp"
-        tools:listitem="@layout/itemtime"/>
+        tools:listitem="@layout/itemdate"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

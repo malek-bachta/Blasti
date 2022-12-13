@@ -41,6 +41,8 @@ class ShowsViewModel : ViewModel() {
         txttitle: TextInputEditText,
         txtgenre: TextInputEditText,
         txtdescription: TextInputEditText,
+        txtactors: TextInputEditText,
+        txttickets: TextInputEditText,
         date: String ,
         context: Context,
         Activity: Activity
@@ -49,6 +51,8 @@ class ShowsViewModel : ViewModel() {
         map["title"] = txttitle.text.toString()
         map["genre"] = txtgenre.text.toString()
         map["description"] = txtdescription.text.toString()
+        map["actors"] = txtactors.text.toString()
+        map["place"] = txttickets.text.toString()
         map["date"] = date
         service.addShow(map).enqueue(object : Callback<java.util.HashMap<String, String>> {
             override fun onResponse(call: Call<java.util.HashMap<String, String>>, response: Response<java.util.HashMap<String, String>>) {

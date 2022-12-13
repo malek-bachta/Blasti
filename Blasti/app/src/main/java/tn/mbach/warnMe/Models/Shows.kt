@@ -32,7 +32,7 @@ class Shows {
     @Expose
     internal val place: String? = null
 
-    @SerializedName("actor")
+    @SerializedName("actors")
     @Expose
     internal val actor: String? = null
 }

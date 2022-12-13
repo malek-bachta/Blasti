@@ -21,10 +21,18 @@ class EventsManagmentFragment : Fragment() {
     private lateinit var txttitleLayout: TextInputLayout
     private lateinit var txtgenreLayout: TextInputLayout
     private lateinit var txtdescriptiondLayout: TextInputLayout
+    private lateinit var txtguestLayout: TextInputLayout
+    private lateinit var txtcostLayout: TextInputLayout
+    private lateinit var txtplacesLayout: TextInputLayout
+    private lateinit var txtadresseLayout: TextInputLayout
     //
     private lateinit var txtTitle: TextInputEditText
     private lateinit var txtGenre: TextInputEditText
     private lateinit var txtDescription: TextInputEditText
+    private lateinit var txtguest: TextInputEditText
+    private lateinit var txtcost: TextInputEditText
+    private lateinit var txtplaces: TextInputEditText
+    private lateinit var txtadresse: TextInputEditText
     //
     private  lateinit var picker : DatePicker
     private lateinit var btnGet : Button
@@ -66,12 +74,19 @@ class EventsManagmentFragment : Fragment() {
         txttitleLayout =  requireView().findViewById(R.id.titlein)
         txtgenreLayout = requireView().findViewById(R.id.genrein)
         txtdescriptiondLayout = requireView().findViewById(R.id.descriptionin)
-
+        txtguestLayout = requireView().findViewById(R.id.guestin)
+        txtcostLayout = requireView().findViewById(R.id.costin)
+        txtplacesLayout = requireView().findViewById(R.id.placesin)
+        txtadresseLayout = requireView().findViewById(R.id.adressin)
         //
 
         txtTitle = requireView().findViewById(R.id.titleedit)
         txtGenre = requireView().findViewById(R.id.genreedit)
         txtDescription = requireView().findViewById(R.id.descriptionedit)
+        txtguest = requireView().findViewById(R.id.guestedit)
+        txtcost = requireView().findViewById(R.id.costedit)
+        txtplaces = requireView().findViewById(R.id.placesedit)
+        txtadresse = requireView().findViewById(R.id.adressedit)
 
     }
 
@@ -87,7 +102,7 @@ class EventsManagmentFragment : Fragment() {
             } else {
                 println("let's Go!!!!!")
                 val dataTime ="" + picker.dayOfMonth + "/" + (picker.month + 1) + "/" + picker.year
-                viewModel.addEvent(txtTitle,txtGenre,txtDescription,dataTime,requireContext(),requireActivity())
+                viewModel.addEvent(txtTitle,txtGenre,txtDescription,txtguest,txtcost,txtplaces,txtadresse,dataTime,requireContext(),requireActivity())
             }
         }
     }

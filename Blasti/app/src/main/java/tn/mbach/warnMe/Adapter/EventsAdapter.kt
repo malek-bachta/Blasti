@@ -22,7 +22,6 @@ class EventsAdapter (var context: Context) : RecyclerView.Adapter<EventsAdapter.
     class eventViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         //        val eventImg : ImageView = itemView.findViewById<ImageView>(R.id.eventimageitem)
-        val eventLocation  : TextView = itemView.findViewById<TextView>(R.id.DescriptioneventItem)
         val eventTitle  : TextView = itemView.findViewById<TextView>(R.id.Titleeventitem)
         val eventDate  : TextView = itemView.findViewById<TextView>(R.id.dateeventitem)
     }
@@ -36,14 +35,14 @@ class EventsAdapter (var context: Context) : RecyclerView.Adapter<EventsAdapter.
         val currentItem = DataList[position]
 
 //        holder.eventImg.setImageResource(currentItem.eventImg)
-        holder.eventLocation.text = currentItem.adress
+//        holder.eventLocation.text = currentItem.adress
         holder.eventTitle.text = currentItem.title
         holder.eventDate.text = currentItem.date
 
         holder.itemView.setOnClickListener {
             val preferences = PreferenceManager.getDefaultSharedPreferences(context)
             val editor = preferences.edit()
-            editor.putString("eventsDescription", currentItem.description)
+//            editor.putString("eventsDescription", currentItem.description)
             editor.putString("eventsTitle", currentItem.title)
             editor.putString("eventsDate", currentItem.date)
             editor.apply()  //Save Data

@@ -25,10 +25,18 @@ class MoviesManagmentFragment : Fragment() {
     private lateinit var txttitleLayout: TextInputLayout
     private lateinit var txtgenreLayout: TextInputLayout
     private lateinit var txtdescriptiondLayout: TextInputLayout
+    private lateinit var txtproductionLayout: TextInputLayout
+    private lateinit var txtlanguageLayout: TextInputLayout
+    private lateinit var txtratingLayout: TextInputLayout
+    private lateinit var txtdurationLayout: TextInputLayout
     //
     private lateinit var txtTitle: TextInputEditText
     private lateinit var txtGenre: TextInputEditText
     private lateinit var txtDescription: TextInputEditText
+    private lateinit var txtproduction: TextInputEditText
+    private lateinit var txtlanguage: TextInputEditText
+    private lateinit var txtrating: TextInputEditText
+    private lateinit var txtduration: TextInputEditText
     //
     private  lateinit var picker : DatePicker
     private lateinit var btnGet : Button
@@ -70,26 +78,37 @@ class MoviesManagmentFragment : Fragment() {
         txttitleLayout =  requireView().findViewById(R.id.titlein)
         txtgenreLayout = requireView().findViewById(R.id.genrein)
         txtdescriptiondLayout = requireView().findViewById(R.id.descriptionin)
-
+        txtproductionLayout = requireView().findViewById(R.id.productionin)
+        txtlanguageLayout = requireView().findViewById(R.id.languagein)
+        txtratingLayout = requireView().findViewById(R.id.ratingin)
+        txtdurationLayout = requireView().findViewById(R.id.durationin)
         //
 
         txtTitle = requireView().findViewById(R.id.titleedit)
         txtGenre = requireView().findViewById(R.id.genreedit)
         txtDescription = requireView().findViewById(R.id.descriptionedit)
+        txtproduction = requireView().findViewById(R.id.productionedit)
+        txtlanguage = requireView().findViewById(R.id.languageedit)
+        txtrating = requireView().findViewById(R.id.ratingedit)
+        txtduration = requireView().findViewById(R.id.durationedit)
 
     }
 
     fun DoActionaddmovie() {
         gettextwathceraddmovie()
         btnGet.setOnClickListener {
-            if (!Validator.VerifisEmpty(txtTitle,txttitleLayout) or !Validator.VerifisEmpty(txtGenre,txtgenreLayout)
+            if (!Validator.VerifisEmpty(txtTitle,txttitleLayout)
+                or !Validator.VerifisEmpty(txtGenre,txtgenreLayout)
+                or !Validator.VerifisEmpty(txtproduction,txtproductionLayout)
+                or !Validator.VerifisEmpty(txtlanguage,txtlanguageLayout)
+                or !Validator.VerifisEmpty(txtduration,txtdurationLayout)
                 or !Validator.VerifisEmpty(txtDescription,txtdescriptiondLayout)) {
                 println("Something is Empty!")
                 return@setOnClickListener
             } else {
                 println("let's Go!!!!!")
                 val dataTime ="" + picker.dayOfMonth + "/" + (picker.month + 1) + "/" + picker.year
-                viewModel.addMovie(txtTitle,txtGenre,txtDescription,dataTime,requireContext(),requireActivity())
+                viewModel.addMovie(txtTitle,txtGenre,txtDescription,txtproduction,txtlanguage,txtrating,txtduration,dataTime,requireContext(),requireActivity())
 
             }
         }

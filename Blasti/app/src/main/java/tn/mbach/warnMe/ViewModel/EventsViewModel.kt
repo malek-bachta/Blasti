@@ -41,14 +41,22 @@ class EventsViewModel : ViewModel() {
         txttitle: TextInputEditText,
         txtgenre: TextInputEditText,
         txtdescription: TextInputEditText,
+        txtguest: TextInputEditText,
+        txtcost: TextInputEditText,
+        txtplaces: TextInputEditText,
+        txtadresse: TextInputEditText,
         date: String,
         context: Context,
         Activity: Activity
     ) {
         val map: HashMap<String, String> = HashMap()
         map["title"] = txttitle.text.toString()
-        map["adress"] = txtgenre.text.toString()
-        map["type"] = txtdescription.text.toString()
+        map["adress"] = txtadresse.text.toString()
+        map["description"] = txtdescription.text.toString()
+        map["type"] = txtgenre.text.toString()
+        map["guest"] = txtguest.text.toString()
+        map["cost"] = txtcost.text.toString()
+        map["pAvailable"] = txtplaces.text.toString()
         map["date"] = date
         service.addEvent(map).enqueue(object : Callback<java.util.HashMap<String, String>> {
             override fun onResponse(call: Call<java.util.HashMap<String, String>>, response: Response<java.util.HashMap<String, String>>) {

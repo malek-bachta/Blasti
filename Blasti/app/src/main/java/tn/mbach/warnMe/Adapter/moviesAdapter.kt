@@ -27,7 +27,6 @@ class moviesAdapter (var context: Context) : RecyclerView.Adapter<moviesAdapter.
     class moviesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
        // val moviesImg : ImageView = itemView.findViewById<ImageView>(R.id.moviesimageitem)
-        val moviesDescription  : TextView = itemView.findViewById<TextView>(R.id.description)
         val moviesTitle  : TextView = itemView.findViewById<TextView>(R.id.title)
         val moviesDate  : TextView = itemView.findViewById<TextView>(R.id.datemoviesitem)
     }
@@ -41,7 +40,7 @@ class moviesAdapter (var context: Context) : RecyclerView.Adapter<moviesAdapter.
         val currentItem = DataList[position]
 
        // holder.moviesImg.setImageResource(currentItem.moviesImg)
-        holder.moviesDescription.text = currentItem.description
+//        holder.moviesDescription.text = currentItem.description
         holder.moviesTitle.text = currentItem.title
         holder.moviesDate.text = currentItem.date
 
@@ -50,7 +49,7 @@ class moviesAdapter (var context: Context) : RecyclerView.Adapter<moviesAdapter.
         holder.itemView.setOnClickListener {
             val preferences = PreferenceManager.getDefaultSharedPreferences(context)
             val editor = preferences.edit()
-            editor.putString("moviesDescription", currentItem.description)
+//            editor.putString("moviesDescription", currentItem.description)
             editor.putString("moviesTitle", currentItem.title)
             editor.putString("moviesDate", currentItem.date)
             editor.apply()  //Save Data

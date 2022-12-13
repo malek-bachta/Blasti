@@ -44,6 +44,10 @@ class MoviesViewModel : ViewModel() {
         txttitle: TextInputEditText,
         txtgenre: TextInputEditText,
         txtdescription: TextInputEditText,
+        txtproduction: TextInputEditText,
+        txtlanguage: TextInputEditText,
+        txtrating: TextInputEditText,
+        txtduration: TextInputEditText,
         date: String,
         context: Context,
         Activity: Activity
@@ -52,6 +56,10 @@ class MoviesViewModel : ViewModel() {
         map["title"] = txttitle.text.toString()
         map["genre"] = txtgenre.text.toString()
         map["description"] = txtdescription.text.toString()
+        map["production"] = txtproduction.text.toString()
+        map["language"] = txtlanguage.text.toString()
+        map["rating"] = txtrating.text.toString()
+        map["duration"] = txtduration.text.toString()
         map["date"] = date
         service.addmovie(map).enqueue(object : Callback<java.util.HashMap<String, String>> {
             override fun onResponse(call: Call<java.util.HashMap<String, String>>, response: Response<java.util.HashMap<String, String>>) {

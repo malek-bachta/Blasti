@@ -23,10 +23,14 @@ class ShowsManagmentFragment : Fragment() {
     private lateinit var txttitleLayout: TextInputLayout
     private lateinit var txtgenreLayout: TextInputLayout
     private lateinit var txtdescriptiondLayout: TextInputLayout
+    private lateinit var txtactorsLayout: TextInputLayout
+    private lateinit var txtticketsLayout: TextInputLayout
     //
     private lateinit var txtTitle: TextInputEditText
     private lateinit var txtGenre: TextInputEditText
     private lateinit var txtDescription: TextInputEditText
+    private lateinit var txtactors: TextInputEditText
+    private lateinit var txttickets: TextInputEditText
 
     //
     private  lateinit var picker : DatePicker
@@ -67,12 +71,16 @@ class ShowsManagmentFragment : Fragment() {
         txttitleLayout =  requireView().findViewById(R.id.titlein)
         txtgenreLayout = requireView().findViewById(R.id.genrein)
         txtdescriptiondLayout = requireView().findViewById(R.id.descriptionin)
+        txtactorsLayout = requireView().findViewById(R.id.actorsin)
+        txtticketsLayout = requireView().findViewById(R.id.ticketsin)
 
         //
 
         txtTitle = requireView().findViewById(R.id.titleedit)
         txtGenre = requireView().findViewById(R.id.genreedit)
         txtDescription = requireView().findViewById(R.id.descriptionedit)
+        txtactors = requireView().findViewById(R.id.actorsedit)
+        txttickets = requireView().findViewById(R.id.ticketsedit)
 
     }
 
@@ -88,7 +96,7 @@ class ShowsManagmentFragment : Fragment() {
             } else {
                 println("let's Go!!!!!")
                 val dataTime ="" + picker.dayOfMonth + "/" + (picker.month + 1) + "/" + picker.year
-                viewModel.addShow(txtTitle,txtGenre,txtDescription,dataTime,requireContext(),requireActivity())
+                viewModel.addShow(txtTitle,txtGenre,txtDescription,txtactors,txttickets,dataTime,requireContext(),requireActivity())
             }
         }
     }

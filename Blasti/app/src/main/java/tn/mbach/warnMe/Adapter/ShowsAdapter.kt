@@ -27,7 +27,6 @@ class ShowsAdapter (var context: Context) : RecyclerView.Adapter<ShowsAdapter.Sh
 
         //val ShowImg : ImageView = itemView.findViewById<ImageView>(R.id.showimageitem)
         val ShowLocation  : TextView = itemView.findViewById<TextView>(R.id.Locationshowitem)
-        val ShowTitle  : TextView = itemView.findViewById<TextView>(R.id.Titleshowitem)
         val ShowDate  : TextView = itemView.findViewById<TextView>(R.id.dateshowitem)
     }
 
@@ -41,13 +40,13 @@ class ShowsAdapter (var context: Context) : RecyclerView.Adapter<ShowsAdapter.Sh
 
         //holder.ShowImg.setImageResource(currentItem.ShowImg)
         holder.ShowLocation.text = currentItem.title
-        holder.ShowTitle.text = currentItem.description
+//        holder.ShowTitle.text = currentItem.description
         holder.ShowDate.text = currentItem.date
 
         holder.itemView.setOnClickListener {
             val preferences = PreferenceManager.getDefaultSharedPreferences(context)
             val editor = preferences.edit()
-            editor.putString("moviesDescription", currentItem.description)
+//            editor.putString("moviesDescription", currentItem.description)
             editor.putString("moviesTitle", currentItem.title)
             editor.putString("moviesDate", currentItem.date)
             editor.apply()  //Save Data

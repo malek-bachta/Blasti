@@ -8,12 +8,13 @@
     android:background="@color/black">
 
     <ScrollView
-        android:layout_width="478dp"
-        android:layout_height="1213dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,12 +29,11 @@
                     android:id="@+id/datepick"
                     android:layout_width="251dp"
                     android:layout_height="180dp"
-                    android:layout_marginTop="412dp"
                     android:calendarViewShown="false"
                     android:datePickerMode="spinner"
                     app:layout_constraintEnd_toEndOf="@+id/descriptionin"
                     app:layout_constraintStart_toStartOf="@+id/descriptionin"
-                    app:layout_constraintTop_toTopOf="@+id/date" />
+                    app:layout_constraintTop_toBottomOf="@+id/durationin" />
 
                 <Button
                     android:id="@+id/addMovie"
@@ -75,8 +75,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    tools:layout_editor_absoluteX="206dp"
-                    tools:layout_editor_absoluteY="492dp" />
+                    tools:layout_editor_absoluteX="454dp"
+                    tools:layout_editor_absoluteY="16dp" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/descriptionin"
@@ -149,8 +149,10 @@
                     app:counterMaxLength="20"
                     app:endIconMode="clear_text"
                     app:helperTextTextColor="#FF0505"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/date"
+                    app:layout_constraintTop_toBottomOf="@+id/descriptionin"
                     app:startIconDrawable="@drawable/ic_production"
                     app:startIconTint="@color/white">
 
@@ -173,6 +175,7 @@
                     app:counterMaxLength="20"
                     app:endIconMode="clear_text"
                     app:helperTextTextColor="#FF0505"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/productionin"
                     app:startIconDrawable="@drawable/ic_langue"
