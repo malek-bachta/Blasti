@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,9 +14,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import androidx.preference.PreferenceManager
 import tn.mbach.warnMe.Data.*
 import tn.mbach.warnMe.Login
 import tn.mbach.warnMe.R
+import tn.mbach.warnMe.Utils.CustomToast
+import tn.mbach.warnMe.back.HomeAdmin
 
 val REQUEST_CODE = 100
 
@@ -24,6 +28,7 @@ class ProfileFragment : Fragment() {
     private lateinit var MyName: TextView
     private lateinit var Myemail: TextView
     private lateinit var btnLogout: Button
+    private lateinit var btndashboard: Button
     private lateinit var MySharedPref: SharedPreferences
     private lateinit var CardProfile: CardView
     private lateinit var imgUser : ImageView
@@ -34,6 +39,11 @@ class ProfileFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile, container, false)
+        val sharedPreference = PreferenceManager.getDefaultSharedPreferences(context)
+        val role = sharedPreference.getString("role", null)
+
+
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -41,6 +51,7 @@ class ProfileFragment : Fragment() {
         MyName = requireView().findViewById(R.id.MyName)
         Myemail = requireView().findViewById(R.id.Myemail)
         imgUser = requireView().findViewById(R.id.profileimg)
+        btndashboard = requireView().findViewById(R.id.dashboard)
 
         CardProfile = requireView().findViewById(R.id.cardprofile)
 
@@ -49,6 +60,8 @@ class ProfileFragment : Fragment() {
         MySharedPref = requireContext().getSharedPreferences(PREF_NAME, AppCompatActivity.MODE_PRIVATE);
         val nameUser = MySharedPref.getString(NAME, null)
         val emailUser = MySharedPref.getString(EMAIL, null)
+        val roleUser = MySharedPref.getString(ROLE, null)
+
 
         MyName.text = nameUser
         Myemail.text = emailUser
@@ -68,8 +81,20 @@ class ProfileFragment : Fragment() {
 
         }
         gotoEditProfile()
+        println("aaaaaaaaaaaaaaaaaaakzklkdzkdnclznkazqk"+roleUser)
 
         imgUser.setOnClickListener { openGalleryForImage() }
+
+
+        if (roleUser == "admin") {
+            btndashboard.visibility = View.VISIBLE
+            btndashboard.setOnClickListener {
+                val intent = Intent (context, HomeAdmin::class.java)
+                startActivity(intent)
+            }
+        } else {
+            btndashboard.visibility = View.GONE
+        }
 
     }
 
@@ -99,8 +124,8 @@ class ProfileFragment : Fragment() {
             imgUser.setImageURI(data?.data) // handle chosen image
             imgUser.setTag("imageHasChanged");
         }
-
     }
+
 
 
 }

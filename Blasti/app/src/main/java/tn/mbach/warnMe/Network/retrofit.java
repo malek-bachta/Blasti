@@ -20,7 +20,10 @@ public class retrofit {
                 .build();
         //////////////////////////////////////////////////////////////
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.170.151:9090/")
+//                .baseUrl("http://192.168.1.51:9090/")
+                .baseUrl("https://serverblasti.onrender.com/")
+                //MongoDB Compass connection string
+                //mongodb+srv://Blasti:8zrvdGnANcuAMtmr@db.83ixmgj.mongodb.net/test
                 .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();

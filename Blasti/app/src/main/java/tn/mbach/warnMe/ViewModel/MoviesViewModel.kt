@@ -3,6 +3,7 @@ package tn.mbach.warnMe.ViewModel
 import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
+import android.widget.AutoCompleteTextView
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.android.material.textfield.TextInputEditText
@@ -45,7 +46,7 @@ class MoviesViewModel : ViewModel() {
         txtgenre: TextInputEditText,
         txtdescription: TextInputEditText,
         txtproduction: TextInputEditText,
-        txtlanguage: TextInputEditText,
+        txtlanguage: AutoCompleteTextView,
         txtrating: TextInputEditText,
         txtduration: TextInputEditText,
         date: String,

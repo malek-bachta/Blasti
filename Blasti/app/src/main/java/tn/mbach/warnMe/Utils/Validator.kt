@@ -1,5 +1,6 @@
 package tn.mbach.warnMe.Utils
 
+import android.widget.AutoCompleteTextView
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import tn.mbach.warnMe.Data.emailRegex
@@ -7,6 +8,17 @@ import tn.mbach.warnMe.Data.emailRegex
 
 class Validator {
     fun VerifisEmpty(txtName: TextInputEditText, txtNameLayout: TextInputLayout): Boolean {
+        val Value: String = txtName.text.toString().trim()
+        if (Value.isEmpty()) {
+            txtNameLayout.error = "Must Not Be Empty!"
+            return false
+        } else {
+            txtNameLayout.setError(null)
+            return true
+        }
+        return true
+    }
+    fun VerifisEmptyauto(txtName: AutoCompleteTextView, txtNameLayout: TextInputLayout): Boolean {
         val Value: String = txtName.text.toString().trim()
         if (Value.isEmpty()) {
             txtNameLayout.error = "Must Not Be Empty!"

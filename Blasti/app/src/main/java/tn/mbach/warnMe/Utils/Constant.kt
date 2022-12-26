@@ -12,6 +12,7 @@ const val AVATAR = "AVATAR"
 const val TOKEN = "TOKEN"
 const val RememberEmail="RememberEmail"
 const val RememberPassword="RememberPassword"
+const val ROLE="ROLE"
 //
 val emailRegex = Pattern.compile(
         "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +

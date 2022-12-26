@@ -49,9 +49,13 @@ class moviesAdapter (var context: Context) : RecyclerView.Adapter<moviesAdapter.
         holder.itemView.setOnClickListener {
             val preferences = PreferenceManager.getDefaultSharedPreferences(context)
             val editor = preferences.edit()
-//            editor.putString("moviesDescription", currentItem.description)
+            editor.putString("moviesDescription", currentItem.description)
             editor.putString("moviesTitle", currentItem.title)
             editor.putString("moviesDate", currentItem.date)
+            editor.putString("moviesGenre", currentItem.genre)
+            editor.putString("moviesProduction", currentItem.production)
+            editor.putString("moviesLanguage", currentItem.language)
+            editor.putString("moviesDuration", currentItem.duration)
             editor.apply()  //Save Data
 //            println("Ratteeeeeeeeeeeee "+data.getRate())
             ///

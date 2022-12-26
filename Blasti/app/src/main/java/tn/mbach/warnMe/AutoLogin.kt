@@ -80,6 +80,7 @@ class AutoLogin : AppCompatActivity() {
                             putString(BIO, response.body()?.getBio())
                             putString(AVATAR, response.body()?.getAvatar())
                             putString(TOKEN, response.body()?.getToken())
+                            putString(ROLE, response.body()?.getRole())
                         }.apply()
 
                         val role = response.body()?.getRole()

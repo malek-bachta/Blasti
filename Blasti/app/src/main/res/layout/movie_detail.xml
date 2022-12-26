@@ -9,21 +9,31 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="769dp">
+                android:layout_height="match_parent">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:visibility="visible"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -36,7 +46,13 @@
                             android:background="@color/black"
                             android:scaleType="centerCrop"
 
-                            app:srcCompat="@drawable/img" />
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0"
+                            app:srcCompat="@drawable/blackp" />
 
                         <Button
                             android:id="@+id/favourite10"
@@ -59,79 +75,66 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textdetailDescription6"
-                    app:layout_constraintVertical_bias="0.853" />
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <Button
                     android:id="@+id/favourite11"
                     android:layout_width="35dp"
                     android:layout_height="33dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="40dp"
                     android:background="@drawable/ic_moviee"
+                    app:layout_constraintBottom_toBottomOf="@+id/textDetailTtitle"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+                    app:layout_constraintTop_toTopOf="@+id/textDetailTtitle" />
 
                 <Button
                     android:id="@+id/favourite12"
                     android:layout_width="35dp"
                     android:layout_height="33dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
                     android:background="@drawable/ic_calendar"
+                    app:layout_constraintBottom_toBottomOf="@+id/textdetailDate"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/favourite11" />
+                    app:layout_constraintTop_toTopOf="@+id/textdetailDate" />
 
                 <Button
                     android:id="@+id/favourite13"
                     android:layout_width="35dp"
                     android:layout_height="33dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
                     android:background="@drawable/ic_type"
+                    app:layout_constraintBottom_toBottomOf="@+id/textdetailGenre"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/favourite12" />
+                    app:layout_constraintTop_toTopOf="@+id/textdetailGenre" />
 
                 <Button
                     android:id="@+id/favourite14"
                     android:layout_width="35dp"
                     android:layout_height="33dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
                     android:background="@drawable/ic_prod"
+                    app:layout_constraintBottom_toBottomOf="@+id/textdetailProduction"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/favourite15" />
+                    app:layout_constraintTop_toTopOf="@+id/textdetailProduction" />
 
                 <Button
                     android:id="@+id/favourite15"
                     android:layout_width="35dp"
                     android:layout_height="33dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
                     android:background="@drawable/ic_description"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/favourite13" />
+                    app:layout_constraintTop_toTopOf="@+id/textdetailDescription" />
 
                 <Button
                     android:id="@+id/favourite16"
                     android:layout_width="35dp"
                     android:layout_height="33dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
                     android:background="@drawable/ic_langue"
+                    app:layout_constraintBottom_toBottomOf="@+id/textdetailLanguage"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/favourite14" />
-
-                <Button
-                    android:id="@+id/favourite17"
-                    android:layout_width="35dp"
-                    android:layout_height="33dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@drawable/ic_rating"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/favourite16" />
+                    app:layout_constraintTop_toTopOf="@+id/textdetailLanguage" />
 
                 <Button
                     android:id="@+id/favourite25"
@@ -139,113 +142,104 @@
                     android:layout_height="33dp"
                     android:layout_marginStart="16dp"
                     android:background="@drawable/ic_duration"
+                    app:layout_constraintBottom_toBottomOf="@+id/textdetailDuration"
                     app:layout_constraintStart_toStartOf="parent"
-                    tools:layout_editor_absoluteY="649dp" />
+                    app:layout_constraintTop_toTopOf="@+id/textdetailDuration" />
 
                 <TextView
                     android:id="@+id/textDetailTtitle"
-                    android:layout_width="wrap_content"
+                    android:layout_width="325dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="44dp"
+                    android:layout_marginTop="48dp"
                     android:text="Title"
                     android:textColor="#ffffffff"
                     android:textSize="20dp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.082"
+                    app:layout_constraintHorizontal_bias="0.305"
                     app:layout_constraintStart_toEndOf="@+id/favourite11"
                     app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
                 <TextView
                     android:id="@+id/textdetailDate"
-                    android:layout_width="wrap_content"
+                    android:layout_width="325dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:text="Date"
                     android:textColor="#ffffffff"
                     android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.082"
+                    app:layout_constraintHorizontal_bias="0.305"
                     app:layout_constraintStart_toEndOf="@+id/favourite12"
                     app:layout_constraintTop_toBottomOf="@+id/textDetailTtitle" />
 
                 <TextView
                     android:id="@+id/textdetailDescription"
-                    android:layout_width="wrap_content"
+                    android:layout_width="325dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
-                    android:text="Description"
+                    android:text="Queen Ramonda, Shuri, M'Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T'Challa's death. As the Wakandans strive to embrace their next chapter, the heroes must band together with Nakia and Everett Ross to forge a new path for their beloved kingdom."
                     android:textColor="#ffffffff"
                     android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.103"
+                    app:layout_constraintHorizontal_bias="0.263"
                     app:layout_constraintStart_toEndOf="@+id/favourite15"
-                    app:layout_constraintTop_toBottomOf="@+id/textdetailDescription2" />
+                    app:layout_constraintTop_toBottomOf="@+id/textdetailGenre" />
 
                 <TextView
-                    android:id="@+id/textdetailDescription2"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/textdetailGenre"
+                    android:layout_width="325dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="24dp"
                     android:text="Genre"
                     android:textColor="#ffffffff"
                     android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.086"
+                    app:layout_constraintHorizontal_bias="0.305"
                     app:layout_constraintStart_toEndOf="@+id/favourite13"
                     app:layout_constraintTop_toBottomOf="@+id/textdetailDate" />
 
                 <TextView
-                    android:id="@+id/textdetailDescription3"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/textdetailProduction"
+                    android:layout_width="325dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="24dp"
                     android:text="Production"
                     android:textColor="#ffffffff"
                     android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.101"
+                    app:layout_constraintHorizontal_bias="0.263"
                     app:layout_constraintStart_toEndOf="@+id/favourite14"
                     app:layout_constraintTop_toBottomOf="@+id/textdetailDescription" />
 
                 <TextView
-                    android:id="@+id/textdetailDescription4"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/textdetailLanguage"
+                    android:layout_width="325dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:text="Language"
                     android:textColor="#ffffffff"
                     android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.097"
+                    app:layout_constraintHorizontal_bias="0.263"
                     app:layout_constraintStart_toEndOf="@+id/favourite16"
-                    app:layout_constraintTop_toBottomOf="@+id/textdetailDescription3" />
+                    app:layout_constraintTop_toBottomOf="@+id/textdetailProduction" />
 
                 <TextView
-                    android:id="@+id/textdetailDescription5"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/textdetailDuration"
+                    android:layout_width="325dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Rating"
-                    android:textColor="#ffffffff"
-                    android:textSize="20dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.087"
-                    app:layout_constraintStart_toEndOf="@+id/favourite17"
-                    app:layout_constraintTop_toBottomOf="@+id/textdetailDescription4" />
-
-                <TextView
-                    android:id="@+id/textdetailDescription6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="86dp"
                     android:text="Duration"
                     android:textColor="#ffffffff"
                     android:textSize="20dp"
+                    app:layout_constraintBottom_toTopOf="@+id/button2"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.093"
+                    app:layout_constraintHorizontal_bias="0.231"
                     app:layout_constraintStart_toEndOf="@+id/favourite25"
-                    app:layout_constraintTop_toBottomOf="@+id/textdetailDescription5" />
+                    app:layout_constraintTop_toBottomOf="@+id/textdetailLanguage"
+                    app:layout_constraintVertical_bias="0.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>

@@ -32,19 +32,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/img_6" />
+            app:srcCompat="@drawable/blackp" />
 
         <TextView
             android:id="@+id/title"
-            android:textSize="20dp"
-            android:layout_width="wrap_content"
+            android:layout_width="207dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
             android:layout_weight="1"
             android:text="Title"
-
             android:textColor="#FFFFFF"
+
+            android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/moviesimageitem"
             app:layout_constraintTop_toTopOf="@+id/moviesimageitem" />

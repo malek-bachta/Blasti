@@ -24,8 +24,7 @@ const AddMovie = async (req, res, next) => {
     video,
     rating,
     duration,
-    writer,
-    director,
+    language,
     production,
   } = req.body;
   if (!title || !description || !genre) {
@@ -45,8 +44,7 @@ const AddMovie = async (req, res, next) => {
         video,
         rating,
         duration,
-        writer,
-        director,
+        language,
         production,
       });
       movie

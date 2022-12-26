@@ -11,9 +11,8 @@ import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.RecyclerView
 import tn.mbach.warnMe.Data.eventInfo
 import tn.mbach.warnMe.Models.Shows
-import tn.mbach.warnMe.Models.moviesss
 import tn.mbach.warnMe.R
-import tn.mbach.warnMe.front.MovieDetail
+import tn.mbach.warnMe.front.ShowsDetail
 
 class ShowsAdapter (var context: Context) : RecyclerView.Adapter<ShowsAdapter.ShowViewHolder> (){
 
@@ -53,7 +52,7 @@ class ShowsAdapter (var context: Context) : RecyclerView.Adapter<ShowsAdapter.Sh
 //            println("Ratteeeeeeeeeeeee "+data.getRate())
             ///
 //            t7ot fuction thezk lel page te3 details
-            val intent = Intent(context, MovieDetail::class.java)
+            val intent = Intent(context, ShowsDetail::class.java)
             context.startActivity(intent)
         }
     }

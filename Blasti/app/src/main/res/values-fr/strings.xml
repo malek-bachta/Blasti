@@ -15,4 +15,27 @@
     <string name="DontHaveAccount">Besoin d\'un compte ? <font color='#FA181B'>Inscrivez-vous ici</font></string>
     <string name="AlreadyHaveAccount">Vous avez déjà un compte? <font color='#FA181B'>Connexion</font></string>
 
+
+    <string-array name="genre">
+        <item>Comedy</item>
+        <item>Horror</item>
+        <item>Thriller</item>
+        <item>Sci-Fi</item>
+        <item>Crime</item>
+        <item>Adventure</item>
+        <item>Animation</item>
+        <item>Family</item>
+        <item>Documentary</item>
+        <item>Biography</item>
+        <item>Drama</item>
+        <item>Mystery</item>
+        <item>History</item>
+        <item>Music</item>
+        <item>War</item>
+        <item>Sport</item>
+        <item>Western</item>
+        <item>Fantasy</item>
+        <item>Romance</item>
+        <item>Action</item>
+    </string-array>
 </resources>

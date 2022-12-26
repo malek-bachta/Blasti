@@ -28,7 +28,7 @@
                     android:layout_marginTop="12dp"
                     android:hint="Genre"
                     app:counterEnabled="true"
-                    app:counterMaxLength="20"
+                    app:counterMaxLength="200"
                     app:endIconMode="clear_text"
                     app:helperTextTextColor="#FF0505"
                     app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +41,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="66dp"
 
-                        android:maxLength="20" />
+                        android:maxLength="200" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
@@ -49,7 +49,7 @@
                     android:layout_width="0dp"
                     android:layout_height="18dp"
                     android:textColor="@color/white"
-                    tools:layout_editor_absoluteX="205dp"
+                    tools:layout_editor_absoluteX="2005dp"
                     tools:layout_editor_absoluteY="16dp" />
 
                 <TextView
@@ -95,7 +95,7 @@
                     android:maxLines="10"
                     android:scrollbars="vertical"
                     app:counterEnabled="true"
-                    app:counterMaxLength="20"
+                    app:counterMaxLength="1000"
                     app:endIconMode="clear_text"
                     app:helperTextTextColor="#FF0505"
                     app:layout_constraintStart_toStartOf="parent"
@@ -108,7 +108,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="108dp"
 
-                        android:maxLength="20" />
+                        android:maxLength="1000" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -119,7 +119,7 @@
                     android:layout_marginTop="144dp"
                     android:hint="Title"
                     app:counterEnabled="true"
-                    app:counterMaxLength="20"
+                    app:counterMaxLength="200"
                     app:endIconMode="clear_text"
                     app:helperTextTextColor="#FF0505"
                     app:layout_constraintStart_toStartOf="parent"
@@ -132,7 +132,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="66dp"
 
-                        android:maxLength="20" />
+                        android:maxLength="200" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -143,7 +143,7 @@
                     android:layout_marginTop="12dp"
                     android:hint="Actors"
                     app:counterEnabled="true"
-                    app:counterMaxLength="20"
+                    app:counterMaxLength="200"
                     app:endIconMode="clear_text"
                     app:helperTextTextColor="#FF0505"
                     app:layout_constraintStart_toStartOf="parent"
@@ -156,7 +156,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="66dp"
 
-                        android:maxLength="20" />
+                        android:maxLength="200" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -167,7 +167,7 @@
                     android:layout_marginTop="12dp"
                     android:hint="Tickets"
                     app:counterEnabled="true"
-                    app:counterMaxLength="20"
+                    app:counterMaxLength="200"
                     app:endIconMode="clear_text"
                     app:helperTextTextColor="#FF0505"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -182,7 +182,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="66dp"
 
-                        android:maxLength="20" />
+                        android:maxLength="200" />
                 </com.google.android.material.textfield.TextInputLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

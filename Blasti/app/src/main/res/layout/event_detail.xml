@@ -9,31 +9,31 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="788dp">
+                android:layout_height="992dp">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/card"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
                     android:layout_marginTop="5dp"
-                    android:layout_marginBottom="24dp"
                     android:visibility="visible"
                     app:cardCornerRadius="10dp"
-                    app:layout_constraintBottom_toTopOf="@+id/favourite2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:visibility="visible">
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -66,194 +66,196 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:id="@+id/EventDetailTtitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:text="Title"
-                    android:textColor="#ffffffff"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.119"
-                    app:layout_constraintStart_toEndOf="@+id/favourite2"
-                    app:layout_constraintTop_toBottomOf="@+id/card" />
-
-                <TextView
-                    android:id="@+id/EventDetailDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Date"
-                    android:textColor="#ffffffff"
-                    android:textSize="20dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.119"
-                    app:layout_constraintStart_toEndOf="@+id/favourite8"
-                    app:layout_constraintTop_toBottomOf="@+id/EventDetailTtitle" />
-
                 <Button
                     android:id="@+id/favourite2"
                     android:layout_width="35dp"
                     android:layout_height="33dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="24dp"
                     android:background="@drawable/ic_movie"
+                    app:layout_constraintBottom_toBottomOf="@+id/EventDetailTtitle"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/card" />
+                    app:layout_constraintTop_toTopOf="@+id/EventDetailTtitle" />
 
                 <Button
                     android:id="@+id/favourite7"
                     android:layout_width="35dp"
                     android:layout_height="33dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="3dp"
                     android:background="@drawable/ic_description"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/favourite8" />
+                    app:layout_constraintTop_toTopOf="@+id/EventDetailDescription" />
 
                 <Button
                     android:id="@+id/favourite8"
                     android:layout_width="35dp"
                     android:layout_height="33dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
                     android:background="@drawable/ic_calendar"
+                    app:layout_constraintBottom_toBottomOf="@+id/EventDetailDate"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/favourite2" />
+                    app:layout_constraintTop_toTopOf="@+id/EventDetailDate" />
 
                 <Button
                     android:id="@+id/favourite6"
                     android:layout_width="35dp"
                     android:layout_height="33dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
                     android:background="@drawable/ic_music"
+                    app:layout_constraintBottom_toBottomOf="@+id/EventDetailGenre"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/favourite7" />
+                    app:layout_constraintTop_toTopOf="@+id/EventDetailGenre" />
 
                 <Button
                     android:id="@+id/favourite3"
                     android:layout_width="35dp"
                     android:layout_height="33dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="3dp"
                     android:background="@drawable/ic_places"
+                    app:layout_constraintBottom_toBottomOf="@+id/EventDetailPlacesD"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/favourite4" />
+                    app:layout_constraintTop_toTopOf="@+id/EventDetailPlacesD" />
 
                 <Button
                     android:id="@+id/favourite26"
                     android:layout_width="35dp"
                     android:layout_height="33dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
                     android:background="@drawable/ic_loc"
+                    app:layout_constraintBottom_toBottomOf="@+id/EventDetailAdress"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/favourite3" />
+                    app:layout_constraintTop_toTopOf="@+id/EventDetailAdress" />
 
                 <Button
                     android:id="@+id/favourite4"
                     android:layout_width="35dp"
                     android:layout_height="33dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
                     android:background="@drawable/ic_cost"
+                    app:layout_constraintBottom_toBottomOf="@+id/EventDetailCost"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/favourite5" />
+                    app:layout_constraintTop_toTopOf="@+id/EventDetailCost" />
 
                 <Button
                     android:id="@+id/favourite5"
                     android:layout_width="35dp"
                     android:layout_height="33dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
                     android:background="@drawable/ic_guest"
+                    app:layout_constraintBottom_toBottomOf="@+id/EventDetailGuest"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/favourite6" />
+                    app:layout_constraintTop_toTopOf="@+id/EventDetailGuest" />
 
                 <TextView
                     android:id="@+id/EventDetailDescription"
-                    android:layout_width="wrap_content"
+                    android:layout_width="325dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginTop="24dp"
                     android:layout_marginEnd="40dp"
                     android:text="Description"
                     android:textColor="#ffffffff"
                     android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.175"
+                    app:layout_constraintHorizontal_bias="0.616"
                     app:layout_constraintStart_toEndOf="@+id/favourite7"
                     app:layout_constraintTop_toBottomOf="@+id/EventDetailDate" />
 
                 <TextView
-                    android:id="@+id/eventDetailGenre"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/EventDetailAdress"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Adress"
+                    android:textColor="#ffffffff"
+                    android:textSize="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.357"
+                    app:layout_constraintStart_toEndOf="@+id/favourite26"
+                    app:layout_constraintTop_toBottomOf="@+id/EventDetailPlacesD" />
+
+                <TextView
+                    android:id="@+id/EventDetailTtitle"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="37dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="60dp"
+                    android:text="Title"
+                    android:textColor="#ffffffff"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/favourite2"
+                    app:layout_constraintTop_toBottomOf="@+id/card" />
+
+                <TextView
+                    android:id="@+id/EventDetailDate"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Date"
+                    android:textColor="#ffffffff"
+                    android:textSize="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.336"
+                    app:layout_constraintStart_toEndOf="@+id/favourite8"
+                    app:layout_constraintTop_toBottomOf="@+id/EventDetailTtitle" />
+
+                <TextView
+                    android:id="@+id/EventDetailGenre"
+                    android:layout_width="325dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:text="Type"
                     android:textColor="#ffffffff"
                     android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.12"
+                    app:layout_constraintHorizontal_bias="0.346"
                     app:layout_constraintStart_toEndOf="@+id/favourite6"
                     app:layout_constraintTop_toBottomOf="@+id/EventDetailDescription" />
 
                 <TextView
-                    android:id="@+id/eventDetailLanguage"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/EventDetailGuest"
+                    android:layout_width="325dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:text="Guest"
                     android:textColor="#ffffffff"
                     android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.123"
+                    app:layout_constraintHorizontal_bias="0.346"
                     app:layout_constraintStart_toEndOf="@+id/favourite5"
-                    app:layout_constraintTop_toBottomOf="@+id/eventDetailGenre" />
+                    app:layout_constraintTop_toBottomOf="@+id/EventDetailGenre" />
 
                 <TextView
-                    android:id="@+id/eventDetailDuration"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/EventDetailCost"
+                    android:layout_width="325dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="24dp"
                     android:text="Cost"
                     android:textColor="#ffffffff"
                     android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.119"
+                    app:layout_constraintHorizontal_bias="0.336"
                     app:layout_constraintStart_toEndOf="@+id/favourite4"
-                    app:layout_constraintTop_toBottomOf="@+id/eventDetailLanguage" />
+                    app:layout_constraintTop_toBottomOf="@+id/EventDetailGuest" />
 
                 <TextView
-                    android:id="@+id/eventDetailRating"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/EventDetailPlacesD"
+                    android:layout_width="325dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:text="Places"
                     android:textColor="#ffffffff"
                     android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.126"
+                    app:layout_constraintHorizontal_bias="0.346"
                     app:layout_constraintStart_toEndOf="@+id/favourite3"
-                    app:layout_constraintTop_toBottomOf="@+id/eventDetailDuration" />
-
-                <TextView
-                    android:id="@+id/eventDetailRating2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Adress"
-                    android:textColor="#ffffffff"
-                    android:textSize="20dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.127"
-                    app:layout_constraintStart_toEndOf="@+id/favourite26"
-                    app:layout_constraintTop_toBottomOf="@+id/eventDetailRating" />
+                    app:layout_constraintTop_toBottomOf="@+id/EventDetailCost" />
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/ReserveButton"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"
                     android:layout_marginTop="20dp"
@@ -262,7 +264,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/eventDetailRating2" />
+                    app:layout_constraintTop_toBottomOf="@+id/EventDetailAdress" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".front.EditProfile"
-    android:background="#292929">
+    android:background="@color/black">
 
 
     <TextView
@@ -15,7 +15,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="20dp"
-        android:text="Mannage Profile"
+        android:text="Manage Profile"
         android:textAlignment="textStart"
         android:textColor="#FDC716"
         android:textSize="20dp"

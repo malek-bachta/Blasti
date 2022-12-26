@@ -98,11 +98,15 @@ class UserViewModel : ViewModel() {
                             putString(BIO, userBio)
                             putString(AVATAR, userAvatar)
                             putString(TOKEN, token)
+                            putString(ROLE, role)
                             if (cbRememberMe.isChecked) {
                                 putString(RememberEmail, loginemail.text.toString().trim())
                                 putString(RememberPassword, loginpassw.text.toString().trim())
                             }
                         }.apply()
+                        println("zaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+role)
+                        println("zaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+userEmail)
+
 
                         if (role == "admin") {
                             val intent = Intent(context, HomeAdmin::class.java)

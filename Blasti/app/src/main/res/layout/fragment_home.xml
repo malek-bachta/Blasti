@@ -147,7 +147,7 @@
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/movies"
-                    tools:listitem="@layout/itemevent" />
+                    tools:listitem="@layout/itemmovies" />
 
                 <TextView
                     android:id="@+id/viewmoremovies"
