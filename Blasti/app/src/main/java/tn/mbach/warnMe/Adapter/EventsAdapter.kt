@@ -44,7 +44,13 @@ class EventsAdapter (var context: Context) : RecyclerView.Adapter<EventsAdapter.
             val editor = preferences.edit()
 //            editor.putString("eventsDescription", currentItem.description)
             editor.putString("eventsTitle", currentItem.title)
+            editor.putString("eventsDescription", currentItem.description)
             editor.putString("eventsDate", currentItem.date)
+            editor.putString("eventsGenre", currentItem.genre)
+            editor.putString("eventsGuest", currentItem.guest)
+            editor.putString("eventsCost", currentItem.cost)
+            editor.putString("eventsPlacesD", currentItem.pAvailable)
+            editor.putString("eventsAdress", currentItem.adress)
             editor.apply()  //Save Data
 //            println("Ratteeeeeeeeeeeee "+data.getRate())
             ///
