@@ -56,4 +56,7 @@ class moviesss {
     @Expose
     internal val production: String? = null
 
+    @SerializedName("message")
+    @Expose
+    val message : String = ""
 }

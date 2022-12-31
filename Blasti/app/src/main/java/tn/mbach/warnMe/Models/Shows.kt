@@ -35,4 +35,8 @@ class Shows {
     @SerializedName("actors")
     @Expose
     internal val actor: String? = null
+
+    @SerializedName("message")
+    @Expose
+    val message : String = ""
 }

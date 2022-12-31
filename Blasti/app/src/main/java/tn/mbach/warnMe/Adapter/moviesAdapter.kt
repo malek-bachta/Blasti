@@ -1,5 +1,6 @@
 package tn.mbach.warnMe.Adapter
 
+import android.app.Application
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -8,8 +9,11 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.view.menu.ActionMenuItemView
+import androidx.lifecycle.ViewModelProvider
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.*
+import tn.mbach.warnMe.Models.FavoriteMovies
 import tn.mbach.warnMe.Models.moviesss
 import tn.mbach.warnMe.R
 import tn.mbach.warnMe.front.MovieDetail
@@ -56,16 +60,40 @@ class moviesAdapter (var context: Context) : RecyclerView.Adapter<moviesAdapter.
             editor.putString("moviesProduction", currentItem.production)
             editor.putString("moviesLanguage", currentItem.language)
             editor.putString("moviesDuration", currentItem.duration)
+            editor.putString("moviesid", currentItem.id)
             editor.apply()  //Save Data
 //            println("Ratteeeeeeeeeeeee "+data.getRate())
             ///
 //            t7ot fuction thezk lel page te3 details
+
+            verifFavorite()
+
+
             val intent = Intent(context, MovieDetail::class.java)
             context.startActivity(intent)
         }
+
     }
 
     override fun getItemCount() = DataList.size
+
+    fun verifFavorite(){
+        val androidFactory =
+            ViewModelProvider.AndroidViewModelFactory(context.applicationContext as Application)
+        val viewModell: FavoriteMovies = androidFactory.create(FavoriteMovies::class.java)
+        //////////////////
+        val Jooobbb = GlobalScope.launch(Dispatchers.Default) {
+            viewModell.VerifFavoriteCoroutineScope(context)
+            // delay the coroutine by 1sec
+            delay(1000)
+        }
+        //////////////////
+        runBlocking {
+            Jooobbb.join()
+            println("Blooocck")
+        }
+        //////////////////
+    }
 
 
 }

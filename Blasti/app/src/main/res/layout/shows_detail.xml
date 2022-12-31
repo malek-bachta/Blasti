@@ -41,7 +41,7 @@
                             app:srcCompat="@drawable/img" />
 
                         <Button
-                            android:id="@+id/favourite9"
+                            android:id="@+id/favouriteS"
                             android:layout_width="36dp"
                             android:layout_height="34dp"
                             android:layout_marginTop="220dp"
@@ -54,7 +54,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/ShowDetailDescription"
+                    android:id="@+id/ShowDetailActors"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -63,36 +63,23 @@
                     android:textColor="#ffffffff"
                     android:textSize="20dp"
                     app:layout_constraintStart_toEndOf="@+id/favourite22"
-                    app:layout_constraintTop_toBottomOf="@+id/showDetailDescription" />
-
-                <TextView
-                    android:id="@+id/showDetailDescription2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Cost"
-                    android:textColor="#ffffffff"
-                    android:textSize="20dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.05"
-                    app:layout_constraintStart_toEndOf="@+id/favourite23"
                     app:layout_constraintTop_toBottomOf="@+id/ShowDetailDescription" />
 
                 <TextView
-                    android:id="@+id/showDetailDescription3"
+                    android:id="@+id/ShowDetailPlaces"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="63dp"
                     android:text="Places"
                     android:textColor="#ffffffff"
                     android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.053"
                     app:layout_constraintStart_toEndOf="@+id/favourite24"
-                    app:layout_constraintTop_toBottomOf="@+id/showDetailDescription2" />
+                    app:layout_constraintTop_toBottomOf="@+id/ShowDetailActors" />
 
                 <TextView
-                    android:id="@+id/showDetailDescription"
+                    android:id="@+id/ShowDetailDescription"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="26dp"
@@ -103,7 +90,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.066"
                     app:layout_constraintStart_toEndOf="@+id/favourite21"
-                    app:layout_constraintTop_toBottomOf="@+id/showDetailDate" />
+                    app:layout_constraintTop_toBottomOf="@+id/ShowDetailGenre" />
 
                 <Button
                     android:id="@+id/favourite18"
@@ -156,24 +143,14 @@
                     app:layout_constraintTop_toBottomOf="@+id/favourite21" />
 
                 <Button
-                    android:id="@+id/favourite23"
-                    android:layout_width="35dp"
-                    android:layout_height="33dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@drawable/ic_cost"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/favourite22" />
-
-                <Button
                     android:id="@+id/favourite24"
                     android:layout_width="35dp"
                     android:layout_height="33dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="65dp"
                     android:background="@drawable/ic_places"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/favourite23" />
+                    app:layout_constraintTop_toBottomOf="@+id/favourite22" />
 
                 <TextView
                     android:id="@+id/ShowDetailTtitle"
@@ -203,7 +180,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/ShowDetailTtitle" />
 
                 <TextView
-                    android:id="@+id/showDetailDate"
+                    android:id="@+id/ShowDetailGenre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -224,7 +201,7 @@
                     android:textColor="#ffffff"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/showDetailDescription3"
+                    app:layout_constraintTop_toBottomOf="@+id/ShowDetailPlaces"
                     app:layout_constraintVertical_bias="1.0" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>

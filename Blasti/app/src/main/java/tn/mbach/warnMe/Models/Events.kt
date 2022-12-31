@@ -44,4 +44,8 @@ class Events {
     @Expose
     internal val image: String? = null
 
+    @SerializedName("message")
+    @Expose
+    val message : String = ""
+
 }
