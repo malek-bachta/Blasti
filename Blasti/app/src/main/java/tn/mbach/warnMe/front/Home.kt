@@ -3,14 +3,17 @@ package tn.mbach.warnMe.front
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import tn.mbach.warnMe.R
 import tn.mbach.warnMe.databinding.HomeBinding
 
 
 class Home : AppCompatActivity() {
 
-    private lateinit var MySharedPref: SharedPreferences
+    /*private lateinit var MySharedPref: SharedPreferences
     private lateinit var binding: HomeBinding
 
 
@@ -41,5 +44,45 @@ class Home : AppCompatActivity() {
             transaction.replace(R.id.frame_layout, fragment)
             transaction.commit()
         }
+    }*/
+
+    lateinit var BottomNavigationView: BottomNavigationView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.home)
+        //
+        BottomNavigationView = findViewById(R.id.bottom_navigation)
+        //
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        supportFragmentManager.beginTransaction().replace(R.id.frame_layout, HomeFragment()).commit();
+        BottomNavigationView.setSelectedItemId(R.id.home)
+        BottomNavigationView.setOnItemSelectedListener { item ->
+            var selectedFragment: Fragment? = null
+            when (item.itemId) {
+                R.id.home -> {
+                    selectedFragment = HomeFragment()
+                }
+                R.id.notification -> {
+                    selectedFragment = NotificationFragment()
+                }
+                R.id.profile -> {
+                    selectedFragment = ProfileFragment()
+                }
+                R.id.settings -> {
+                    selectedFragment = SettingsFragment()
+                }
+            }
+            val transaction = supportFragmentManager.beginTransaction()
+            transaction.setCustomAnimations(
+                R.anim.slide_in,
+                R.anim.slide_out
+            )
+            transaction.replace(R.id.frame_layout, selectedFragment!!)
+            transaction.commit()
+            true
+        }
+        ///////////////////////////////////////////////////////////////////////////////////////////
     }
+
 }

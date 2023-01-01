@@ -1,32 +1,51 @@
 package tn.mbach.warnMe.front
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.SharedPreferences
 import android.os.Bundle
-import android.widget.Button
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import tn.mbach.warnMe.Data.PREF_NAME
 import tn.mbach.warnMe.R
 
-class EditProfile : AppCompatActivity() {
+class EditProfile : Fragment() {
 
-    private lateinit var btnback: Button
+    lateinit var buttonbackedit: ImageView
+    private lateinit var MySharedPref: SharedPreferences
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        supportActionBar?.hide()
-        setContentView(R.layout.activity_edit_profile)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.edit_profile, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        (requireActivity() as Home).BottomNavigationView.visibility =
+            View.GONE // Hide Bottom Nav (Par prof)
+
         initView()
         BackToProfile()
+
     }
+
 
     fun initView() {
-        btnback = findViewById(R.id.buttonback)
+        MySharedPref =
+            requireContext().getSharedPreferences(PREF_NAME, AppCompatActivity.MODE_PRIVATE);
+
+        buttonbackedit = requireView().findViewById(R.id.buttonbackedit)
     }
-
-
     fun BackToProfile() {
-        btnback.setOnClickListener {
-            val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.frame_layout, ProfileFragment())
-            transaction.commit()
+        buttonbackedit.setOnClickListener {
+            //fragmentManager?.beginTransaction()?.replace(R.id.container, EditProfil())?.commit()
+            fragmentManager?.beginTransaction()?.replace(R.id.frame_layout, ProfileFragment())
+                ?.addToBackStack("profile")?.commit()
+            (requireActivity() as Home).BottomNavigationView.visibility = View.VISIBLE
         }
     }
 }

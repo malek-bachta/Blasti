@@ -23,4 +23,10 @@ interface UserApi {
     @POST("api/user/register")
     fun signup(@Body map : HashMap<String, String> ): Call<JsonObject>
 
+
+    @POST("api/user/EditProfil")
+    fun EditProfil(@Body map : HashMap<String, String> ): Call<JsonObject>
+
+
+
 }

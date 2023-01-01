@@ -14,6 +14,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import androidx.core.app.ActivityCompat.startActivityForResult
 import androidx.preference.PreferenceManager
 import tn.mbach.warnMe.Data.*
 import tn.mbach.warnMe.Login
@@ -101,11 +102,10 @@ class ProfileFragment : Fragment() {
     fun gotoEditProfile()
     {
         CardProfile.setOnClickListener {
-            activity?.let{
-                val intent = Intent (it, EditProfile::class.java)
-                it.startActivity(intent)
+            fragmentManager?.beginTransaction()?.replace(R.id.frame_layout, EditProfile())?.addToBackStack("Edit")?.commit()
             }
-        }
+
+
     }
 
 
