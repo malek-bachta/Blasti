@@ -1,4 +1,4 @@
-package tn.mbach.Blasti.front
+package tn.mbach.warnMe.front
 
 import android.app.Activity
 import android.content.Intent
@@ -16,11 +16,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.app.ActivityCompat.startActivityForResult
 import androidx.preference.PreferenceManager
-import tn.mbach.Blasti.Data.*
-import tn.mbach.Blasti.Login
-import tn.mbach.Blasti.R
-import tn.mbach.Blasti.Utils.CustomToast
-import tn.mbach.Blasti.back.HomeAdmin
+import tn.mbach.warnMe.Data.*
+import tn.mbach.warnMe.Login
+import tn.mbach.warnMe.R
+import tn.mbach.warnMe.Utils.CustomToast
+import tn.mbach.warnMe.back.HomeAdmin
 
 val REQUEST_CODE = 100
 

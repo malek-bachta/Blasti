@@ -1,4 +1,4 @@
-package tn.mbach.Blasti.PasswordStrength
+package tn.mbach.warnMe.PasswordStrength
 
 class StrengthRules() {
 

@@ -1,9 +1,9 @@
-package tn.mbach.Blasti.Data
+package tn.mbach.warnMe.Data
 
 import java.util.regex.Pattern
 
 //
-const val PREF_NAME = "PREF_Blasti"
+const val PREF_NAME = "PREF_warnMe"
 const val ID = "ID"
 const val NAME = "NAME"
 const val EMAIL = "EMAIL"

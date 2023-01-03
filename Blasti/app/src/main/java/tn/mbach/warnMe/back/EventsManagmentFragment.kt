@@ -1,4 +1,4 @@
-package tn.mbach.Blasti.back
+package tn.mbach.warnMe.back
 
 import android.os.Bundle
 import android.text.Editable
@@ -13,9 +13,9 @@ import android.widget.TextView
 import androidx.fragment.app.viewModels
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
-import tn.mbach.Blasti.R
-import tn.mbach.Blasti.Utils.Validator
-import tn.mbach.Blasti.ViewModel.EventsViewModel
+import tn.mbach.warnMe.R
+import tn.mbach.warnMe.Utils.Validator
+import tn.mbach.warnMe.ViewModel.EventsViewModel
 
 class EventsManagmentFragment : Fragment() {
     private lateinit var txttitleLayout: TextInputLayout

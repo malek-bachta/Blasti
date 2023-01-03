@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'tn.mbach.Blasti'
+    namespace 'tn.mbach.warnMe'
     compileSdk 32
 
     defaultConfig {
-        applicationId "tn.mbach.Blasti"
+        applicationId "tn.mbach.warnMe"
         minSdk 19
         targetSdk 32
         versionCode 1

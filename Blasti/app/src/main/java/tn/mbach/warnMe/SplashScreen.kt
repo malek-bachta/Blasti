@@ -1,4 +1,4 @@
-package tn.mbach.Blasti
+package tn.mbach.warnMe
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

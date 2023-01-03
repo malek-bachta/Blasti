@@ -1,4 +1,4 @@
-package tn.mbach.Blasti.front
+package tn.mbach.warnMe.front
 
 import android.annotation.SuppressLint
 import android.content.SharedPreferences
@@ -17,20 +17,20 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
-import tn.mbach.Blasti.Adapter.FavoriteEventAdapter
-import tn.mbach.Blasti.Adapter.FavoriteMovieAdapter
-import tn.mbach.Blasti.Adapter.FavoriteShowAdapter
-import tn.mbach.Blasti.Data.ID
-import tn.mbach.Blasti.Data.PREF_NAME
-import tn.mbach.Blasti.Models.Events
-import tn.mbach.Blasti.Models.Shows
-import tn.mbach.Blasti.Models.User
-import tn.mbach.Blasti.Models.moviesss
-import tn.mbach.Blasti.Network.EventsApi
-import tn.mbach.Blasti.Network.MoviesApi
-import tn.mbach.Blasti.Network.ShowsApi
-import tn.mbach.Blasti.Network.retrofit
-import tn.mbach.Blasti.R
+import tn.mbach.warnMe.Adapter.FavoriteEventAdapter
+import tn.mbach.warnMe.Adapter.FavoriteMovieAdapter
+import tn.mbach.warnMe.Adapter.FavoriteShowAdapter
+import tn.mbach.warnMe.Data.ID
+import tn.mbach.warnMe.Data.PREF_NAME
+import tn.mbach.warnMe.Models.Events
+import tn.mbach.warnMe.Models.Shows
+import tn.mbach.warnMe.Models.User
+import tn.mbach.warnMe.Models.moviesss
+import tn.mbach.warnMe.Network.EventsApi
+import tn.mbach.warnMe.Network.MoviesApi
+import tn.mbach.warnMe.Network.ShowsApi
+import tn.mbach.warnMe.Network.retrofit
+import tn.mbach.warnMe.R
 
 
 class SettingsFragment : Fragment() {

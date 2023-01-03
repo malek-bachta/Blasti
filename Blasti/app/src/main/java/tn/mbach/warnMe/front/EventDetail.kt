@@ -1,4 +1,4 @@
-package tn.mbach.Blasti.front
+package tn.mbach.warnMe.front
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -19,12 +19,12 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
-import tn.mbach.Blasti.Data.ID
-import tn.mbach.Blasti.Data.PREF_NAME
-import tn.mbach.Blasti.Network.EventsApi
-import tn.mbach.Blasti.Network.retrofit
-import tn.mbach.Blasti.R
-import tn.mbach.Blasti.Utils.CustomToast
+import tn.mbach.warnMe.Data.ID
+import tn.mbach.warnMe.Data.PREF_NAME
+import tn.mbach.warnMe.Network.EventsApi
+import tn.mbach.warnMe.Network.retrofit
+import tn.mbach.warnMe.R
+import tn.mbach.warnMe.Utils.CustomToast
 
 class EventDetail : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

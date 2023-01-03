@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Blasti</string>
+    <string name="app_name">warnMe</string>
     <!--+++++++++++++++++++++++++++++++++++++++++++++ Begin of Login++++++++++++++++++++++++++++++++++++++++++++++++-->
     <string name="DontHaveAccount">Don\'t have an account ? <font color='#FA181B'>Register</font></string>
     <string name="AlreadyHaveAccount">Already have an account? <font color='#FA181B'>Login</font></string>

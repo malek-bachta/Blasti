@@ -1,8 +1,8 @@
-package tn.mbach.Blasti.front
+package tn.mbach.warnMe.front
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import tn.mbach.Blasti.R
+import tn.mbach.warnMe.R
 
 class TicketNotif : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

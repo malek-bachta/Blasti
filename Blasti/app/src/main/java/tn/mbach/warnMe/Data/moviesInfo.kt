@@ -1,4 +1,4 @@
-package tn.mbach.Blasti.Data
+package tn.mbach.warnMe.Data
 
 data class moviesInfo(
     var moviesImg : Int,

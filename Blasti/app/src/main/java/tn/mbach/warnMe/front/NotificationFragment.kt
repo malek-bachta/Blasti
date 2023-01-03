@@ -1,4 +1,4 @@
-package tn.mbach.Blasti.front
+package tn.mbach.warnMe.front
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.cardview.widget.CardView
-import tn.mbach.Blasti.R
+import tn.mbach.warnMe.R
 
 
 class NotificationFragment : Fragment() {

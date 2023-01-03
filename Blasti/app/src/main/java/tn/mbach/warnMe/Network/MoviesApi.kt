@@ -1,4 +1,4 @@
-package tn.mbach.Blasti.Network;
+package tn.mbach.warnMe.Network;
 
 import com.google.gson.JsonObject;
 import okhttp3.MultipartBody
@@ -10,9 +10,9 @@ import java.util.HashMap;
 import retrofit2.Call;
 import retrofit2.Response
 import retrofit2.http.*
-import tn.mbach.Blasti.Models.User
-import tn.mbach.Blasti.Models.moviesss
-import tn.mbach.Blasti.front.MovieGenre
+import tn.mbach.warnMe.Models.User
+import tn.mbach.warnMe.Models.moviesss
+import tn.mbach.warnMe.front.MovieGenre
 
 interface MoviesApi {
 

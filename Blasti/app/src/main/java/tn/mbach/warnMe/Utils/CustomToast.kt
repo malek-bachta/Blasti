@@ -1,4 +1,4 @@
-package tn.mbach.Blasti.Utils
+package tn.mbach.warnMe.Utils
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.TextView
 import android.widget.Toast
-import tn.mbach.Blasti.R
+import tn.mbach.warnMe.R
 
 
 class CustomToast(private val context: Context, private val message: String,Color:String) :

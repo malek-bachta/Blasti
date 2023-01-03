@@ -1,4 +1,4 @@
-package tn.mbach.Blasti.back
+package tn.mbach.warnMe.back
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -11,12 +11,12 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.replace
 import com.google.android.material.navigation.NavigationView
-import tn.mbach.Blasti.Data.PREF_NAME
-import tn.mbach.Blasti.Data.RememberEmail
-import tn.mbach.Blasti.Data.RememberPassword
-import tn.mbach.Blasti.Login
-import tn.mbach.Blasti.R
-import tn.mbach.Blasti.front.Home
+import tn.mbach.warnMe.Data.PREF_NAME
+import tn.mbach.warnMe.Data.RememberEmail
+import tn.mbach.warnMe.Data.RememberPassword
+import tn.mbach.warnMe.Login
+import tn.mbach.warnMe.R
+import tn.mbach.warnMe.front.Home
 
 class HomeAdmin : AppCompatActivity() {
 

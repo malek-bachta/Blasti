@@ -1,4 +1,4 @@
-package tn.mbach.Blasti.Adapter
+package tn.mbach.warnMe.Adapter
 
 import android.app.Application
 import android.content.Context
@@ -12,13 +12,13 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.*
-import tn.mbach.Blasti.Models.Events
-import tn.mbach.Blasti.Models.FavoriteEvents
-import tn.mbach.Blasti.Models.FavoriteMovies
-import tn.mbach.Blasti.Models.moviesss
-import tn.mbach.Blasti.R
-import tn.mbach.Blasti.front.EventDetail
-import tn.mbach.Blasti.front.MovieDetail
+import tn.mbach.warnMe.Models.Events
+import tn.mbach.warnMe.Models.FavoriteEvents
+import tn.mbach.warnMe.Models.FavoriteMovies
+import tn.mbach.warnMe.Models.moviesss
+import tn.mbach.warnMe.R
+import tn.mbach.warnMe.front.EventDetail
+import tn.mbach.warnMe.front.MovieDetail
 
 class FavoriteEventAdapter (var context: Context) : RecyclerView.Adapter<FavoriteEventAdapter.eventViewHolder> (){
 

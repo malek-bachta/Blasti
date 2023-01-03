@@ -1,4 +1,4 @@
-package tn.mbach.Blasti.Adapter
+package tn.mbach.warnMe.Adapter
 
 import android.app.Application
 import android.content.Context
@@ -12,11 +12,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.*
-import tn.mbach.Blasti.Data.eventInfo
-import tn.mbach.Blasti.Models.FavoriteShows
-import tn.mbach.Blasti.Models.Shows
-import tn.mbach.Blasti.R
-import tn.mbach.Blasti.front.ShowsDetail
+import tn.mbach.warnMe.Data.eventInfo
+import tn.mbach.warnMe.Models.FavoriteShows
+import tn.mbach.warnMe.Models.Shows
+import tn.mbach.warnMe.R
+import tn.mbach.warnMe.front.ShowsDetail
 
 class ShowsAdapter (var context: Context) : RecyclerView.Adapter<ShowsAdapter.ShowViewHolder> (){
 

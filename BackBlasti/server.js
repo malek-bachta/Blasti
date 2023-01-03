@@ -13,7 +13,7 @@ mongoose.set("debug", true);
 mongoose.Promise = global.Promise;
 //////////////////////////////////////////////////////////////////////////////
 mongoose
-.connect("mongodb+srv://Blasti:8zrvdGnANcuAMtmr@db.83ixmgj.mongodb.net/BlastiDB?retryWrites=true&w=majority", {
+.connect("mongodb+srv://warnMe:8zrvdGnANcuAMtmr@db.83ixmgj.mongodb.net/warnMeDB?retryWrites=true&w=majority", {
   useNewUrlParser: true,
     useUnifiedTopology: true,
   })

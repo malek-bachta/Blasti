@@ -1,4 +1,4 @@
-package tn.mbach.Blasti.Network;
+package tn.mbach.warnMe.Network;
 
 import com.google.gson.JsonObject
 import java.util.HashMap;
@@ -8,8 +8,8 @@ import retrofit2.Response
 import retrofit2.http.Body;
 import retrofit2.http.GET
 import retrofit2.http.POST;
-import tn.mbach.Blasti.Models.Shows
-import tn.mbach.Blasti.Models.User
+import tn.mbach.warnMe.Models.Shows
+import tn.mbach.warnMe.Models.User
 
 
 interface ShowsApi {

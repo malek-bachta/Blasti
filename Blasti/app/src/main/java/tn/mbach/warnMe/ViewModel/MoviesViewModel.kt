@@ -1,4 +1,4 @@
-package tn.mbach.Blasti.ViewModel
+package tn.mbach.warnMe.ViewModel
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -19,13 +19,13 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
-import tn.mbach.Blasti.Models.moviesss
-import tn.mbach.Blasti.Network.Loginresponse
-import tn.mbach.Blasti.Network.MoviesApi
-import tn.mbach.Blasti.Network.retrofit
-import tn.mbach.Blasti.Utils.CustomToast
-import tn.mbach.Blasti.Utils.ReadyFunction
-import tn.mbach.Blasti.back.MoviesManagmentFragment
+import tn.mbach.warnMe.Models.moviesss
+import tn.mbach.warnMe.Network.Loginresponse
+import tn.mbach.warnMe.Network.MoviesApi
+import tn.mbach.warnMe.Network.retrofit
+import tn.mbach.warnMe.Utils.CustomToast
+import tn.mbach.warnMe.Utils.ReadyFunction
+import tn.mbach.warnMe.back.MoviesManagmentFragment
 
 class MoviesViewModel : ViewModel() {
     val retrofi: Retrofit = retrofit.getInstance()

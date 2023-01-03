@@ -1,4 +1,4 @@
-package tn.mbach.Blasti.back
+package tn.mbach.warnMe.back
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -30,14 +30,14 @@ import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
-import tn.mbach.Blasti.Data.ID
-import tn.mbach.Blasti.Data.PREF_NAME
-import tn.mbach.Blasti.R
-import tn.mbach.Blasti.Utils.CustomToast
-import tn.mbach.Blasti.Utils.Validator
-import tn.mbach.Blasti.ViewModel.MoviesViewModel
-import tn.mbach.Blasti.databinding.FragmentMoviesManagmentBinding
-import tn.mbach.Blasti.front.MovieGenre
+import tn.mbach.warnMe.Data.ID
+import tn.mbach.warnMe.Data.PREF_NAME
+import tn.mbach.warnMe.R
+import tn.mbach.warnMe.Utils.CustomToast
+import tn.mbach.warnMe.Utils.Validator
+import tn.mbach.warnMe.ViewModel.MoviesViewModel
+import tn.mbach.warnMe.databinding.FragmentMoviesManagmentBinding
+import tn.mbach.warnMe.front.MovieGenre
 import java.io.File
 import java.io.FileOutputStream
 

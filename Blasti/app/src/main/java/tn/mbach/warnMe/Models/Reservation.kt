@@ -1,4 +1,4 @@
-package tn.mbach.Blasti.Models
+package tn.mbach.warnMe.Models
 
 class Reservation {
 }

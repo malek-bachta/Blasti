@@ -1,4 +1,4 @@
-package tn.mbach.Blasti.Data
+package tn.mbach.warnMe.Data
 
 data class eventInfo(
     var eventImg : Int,

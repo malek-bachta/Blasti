@@ -1,4 +1,4 @@
-package tn.mbach.Blasti.Network;
+package tn.mbach.warnMe.Network;
 
 
 import java.util.concurrent.TimeUnit;
@@ -21,9 +21,9 @@ public class retrofit {
         //////////////////////////////////////////////////////////////
         Retrofit retrofit = new Retrofit.Builder()
 //                .baseUrl("http://192.168.1.51:9090/")
-                .baseUrl("https://serverblasti.onrender.com/")
+                .baseUrl("https://serverwarnMe.onrender.com/")
                 //MongoDB Compass connection string
-                //mongodb+srv://Blasti:8zrvdGnANcuAMtmr@db.83ixmgj.mongodb.net/test
+                //mongodb+srv://warnMe:8zrvdGnANcuAMtmr@db.83ixmgj.mongodb.net/test
                 .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
