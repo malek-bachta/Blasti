@@ -1,4 +1,4 @@
-package tn.mbach.warnMe.Network;
+package tn.mbach.Blasti.Network;
 
 import com.google.gson.JsonObject
 import java.util.HashMap;
@@ -8,8 +8,8 @@ import retrofit2.Response
 import retrofit2.http.Body;
 import retrofit2.http.GET
 import retrofit2.http.POST;
-import tn.mbach.warnMe.Models.Shows
-import tn.mbach.warnMe.Models.User
+import tn.mbach.Blasti.Models.Shows
+import tn.mbach.Blasti.Models.User
 
 
 interface ShowsApi {
@@ -26,7 +26,7 @@ interface ShowsApi {
     fun AddFavorite(@Body map : HashMap<String, String>): Call<JsonObject>
 
     @POST("api/favoriteShow/FavoritefindByUser")
-    fun FavoritefindByUser(@Body map : HashMap<String, String>): Call<List<User>>
+    fun FavoritefindByUser(@Body map : HashMap<String, String>): Call<List<Shows>>
 
     @POST("api/favoriteShow/delete")
     fun FavoriteDelete(@Body map : HashMap<String, String>): Call<JsonObject>

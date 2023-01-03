@@ -1,4 +1,4 @@
-package tn.mbach.warnMe.ViewModel
+package tn.mbach.Blasti.ViewModel
 
 
 import android.app.Activity
@@ -19,13 +19,13 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
-import tn.mbach.warnMe.Data.*
-import tn.mbach.warnMe.Models.User
-import tn.mbach.warnMe.Network.UserApi
-import tn.mbach.warnMe.Network.retrofit
-import tn.mbach.warnMe.Utils.CustomToast
-import tn.mbach.warnMe.Utils.ReadyFunction
-import tn.mbach.warnMe.back.HomeAdmin
+import tn.mbach.Blasti.Data.*
+import tn.mbach.Blasti.Models.User
+import tn.mbach.Blasti.Network.UserApi
+import tn.mbach.Blasti.Network.retrofit
+import tn.mbach.Blasti.Utils.CustomToast
+import tn.mbach.Blasti.Utils.ReadyFunction
+import tn.mbach.Blasti.back.HomeAdmin
 
 
 class UserViewModel : ViewModel() {
@@ -169,7 +169,7 @@ class UserViewModel : ViewModel() {
                 val message = Data!!.asJsonObject.get("message").asString
                 //
                 if (message == "SignUp Done!") {
-                    CustomToast(context, "Success! you've joined warnMe", "GREEN").show()
+                    CustomToast(context, "Success! you've joined Blasti", "GREEN").show()
                     ReadyFunction.GoToActivityLogin(context, Activity) //GoTo Page Home
                 } else {
                     CustomToast(context, "This Email Already Exist!", "RED").show()

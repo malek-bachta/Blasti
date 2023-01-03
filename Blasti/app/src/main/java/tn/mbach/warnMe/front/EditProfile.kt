@@ -1,4 +1,4 @@
-package tn.mbach.warnMe.front
+package tn.mbach.Blasti.front
 
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import tn.mbach.warnMe.Data.PREF_NAME
-import tn.mbach.warnMe.R
+import tn.mbach.Blasti.Data.PREF_NAME
+import tn.mbach.Blasti.R
 
 class EditProfile : Fragment() {
 

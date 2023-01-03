@@ -1,4 +1,4 @@
-package tn.mbach.warnMe
+package tn.mbach.Blasti
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -10,12 +10,12 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
-import tn.mbach.warnMe.Data.EMAIL
-import tn.mbach.warnMe.Data.PREF_NAME
-import tn.mbach.warnMe.back.HomeAdmin
-import tn.mbach.warnMe.Utils.ReadyFunction
-import tn.mbach.warnMe.Utils.Validator
-import tn.mbach.warnMe.ViewModel.UserViewModel
+import tn.mbach.Blasti.Data.EMAIL
+import tn.mbach.Blasti.Data.PREF_NAME
+import tn.mbach.Blasti.back.HomeAdmin
+import tn.mbach.Blasti.Utils.ReadyFunction
+import tn.mbach.Blasti.Utils.Validator
+import tn.mbach.Blasti.ViewModel.UserViewModel
 
 class Login : AppCompatActivity() {
     private lateinit var txtForgetPassword: TextView

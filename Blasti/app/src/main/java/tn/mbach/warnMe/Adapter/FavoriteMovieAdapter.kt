@@ -6,60 +6,45 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
+import android.widget.Button
 import android.widget.TextView
-import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.lifecycle.ViewModelProvider
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import kotlinx.coroutines.*
 import tn.mbach.Blasti.Models.FavoriteMovies
 import tn.mbach.Blasti.Models.moviesss
 import tn.mbach.Blasti.R
 import tn.mbach.Blasti.front.MovieDetail
 
-class moviesAdapter (var context: Context) : RecyclerView.Adapter<moviesAdapter.moviesViewHolder> (){
+class FavoriteMovieAdapter(var context: Context) : RecyclerView.Adapter<FavoriteMovieAdapter.moviesViewHolder> (){
 
     var DataList = mutableListOf<moviesss>()
-    var postList= ArrayList<moviesss>()
-
     internal fun setData(movieArray : ArrayList<moviesss>)
     {
-      this.DataList = movieArray
-        this.postList = movieArray
+        this.DataList = movieArray
     }
-  /*  //video fi android 
-    exoplayer*/
+    /*  //video fi android
+      exoplayer*/
 
     class moviesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        //val moviesImg : ImageView = itemView.findViewById<ImageView>(R.id.moviesimageitem)
+        // val moviesImg : ImageView = itemView.findViewById<ImageView>(R.id.moviesimageitem)
         val moviesTitle  : TextView = itemView.findViewById<TextView>(R.id.title)
         val moviesDate  : TextView = itemView.findViewById<TextView>(R.id.datemoviesitem)
-        val moviesimageitem : ImageView = itemView.findViewById<ImageView>(R.id.moviesimageitem)
-
+        val favorite : Button = itemView.findViewById<Button>(R.id.favorite)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): moviesViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.itemmovies, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.itemfavm, parent, false)
         return moviesViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: moviesViewHolder, position: Int) {
         val currentItem = DataList[position]
 
-       // holder.moviesImg.setImageResource(currentItem.moviesImg)
+        // holder.moviesImg.setImageResource(currentItem.moviesImg)
 //        holder.moviesDescription.text = currentItem.description
-
-        val ImagePlace = ("https://serverblasti.onrender.com/images/"+postList[position].image)
-        println("Imageeeee ==>>>>> "+ImagePlace)
-        Glide
-            .with(context)
-            .load(ImagePlace)
-            .fitCenter()
-            .into(holder.moviesimageitem);
-
         holder.moviesTitle.text = currentItem.title
         holder.moviesDate.text = currentItem.date
 
@@ -69,7 +54,6 @@ class moviesAdapter (var context: Context) : RecyclerView.Adapter<moviesAdapter.
             val preferences = PreferenceManager.getDefaultSharedPreferences(context)
             val editor = preferences.edit()
             editor.putString("moviesDescription", currentItem.description)
-            editor.putString("moviesImage", currentItem.image)
             editor.putString("moviesTitle", currentItem.title)
             editor.putString("moviesDate", currentItem.date)
             editor.putString("moviesGenre", currentItem.genre)

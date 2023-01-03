@@ -1,4 +1,4 @@
-package tn.mbach.warnMe.ViewModel
+package tn.mbach.Blasti.ViewModel
 
 import android.app.Activity
 import android.content.Context
@@ -10,11 +10,11 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
-import tn.mbach.warnMe.Models.Events
-import tn.mbach.warnMe.Network.EventsApi
-import tn.mbach.warnMe.Network.retrofit
-import tn.mbach.warnMe.Utils.CustomToast
-import tn.mbach.warnMe.Utils.ReadyFunction
+import tn.mbach.Blasti.Models.Events
+import tn.mbach.Blasti.Network.EventsApi
+import tn.mbach.Blasti.Network.retrofit
+import tn.mbach.Blasti.Utils.CustomToast
+import tn.mbach.Blasti.Utils.ReadyFunction
 
 class EventsViewModel : ViewModel() {
     val retrofi: Retrofit = retrofit.getInstance()

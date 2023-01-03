@@ -115,30 +115,30 @@
                     tools:layout_editor_absoluteX="16dp"
                     tools:layout_editor_absoluteY="16dp" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/testin"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="52dp"
-                    android:hint="test"
-                    app:counterEnabled="true"
-                    app:counterMaxLength="100"
-                    app:endIconMode="clear_text"
-                    app:helperTextTextColor="#FF0505"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView3"
-                    app:startIconDrawable="@drawable/ic_baseline_person_24"
-                    app:startIconTint="@color/white">
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:id="@+id/testin"-->
+<!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="52dp"-->
+<!--                    android:hint="test"-->
+<!--                    app:counterEnabled="true"-->
+<!--                    app:counterMaxLength="100"-->
+<!--                    app:endIconMode="clear_text"-->
+<!--                    app:helperTextTextColor="#FF0505"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textView3"-->
+<!--                    app:startIconDrawable="@drawable/ic_baseline_person_24"-->
+<!--                    app:startIconTint="@color/white">-->
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/testedit"
-                        android:layout_width="match_parent"
-                        android:layout_height="66dp"
-                        android:inputType="none"
-                        android:maxLength="100" />
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/testedit"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="66dp"-->
+<!--                        android:inputType="none"-->
+<!--                        android:maxLength="100" />-->
 
-                </com.google.android.material.textfield.TextInputLayout>
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/titlein"
@@ -261,6 +261,16 @@
 
                         android:maxLength="100" />
                 </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/uploadimgM"
+                    android:layout_width="85dp"
+                    android:layout_height="57dp"
+                    android:layout_marginTop="28dp"
+                    android:src="@drawable/ic_upload"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>

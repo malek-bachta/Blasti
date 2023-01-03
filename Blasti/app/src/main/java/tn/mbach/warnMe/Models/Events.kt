@@ -1,4 +1,4 @@
-package tn.mbach.warnMe.Models
+package tn.mbach.Blasti.Models
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

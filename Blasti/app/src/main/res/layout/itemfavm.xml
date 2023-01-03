@@ -36,7 +36,7 @@
             app:srcCompat="@drawable/img_6" />
 
         <Button
-            android:id="@+id/favourite27"
+            android:id="@+id/favorite"
             android:layout_width="35dp"
             android:layout_height="33dp"
             android:layout_marginTop="136dp"

@@ -6,19 +6,18 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
+import android.widget.Button
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.*
-import tn.mbach.Blasti.Data.eventInfo
 import tn.mbach.Blasti.Models.FavoriteShows
 import tn.mbach.Blasti.Models.Shows
 import tn.mbach.Blasti.R
 import tn.mbach.Blasti.front.ShowsDetail
 
-class ShowsAdapter (var context: Context) : RecyclerView.Adapter<ShowsAdapter.ShowViewHolder> (){
+class FavoriteShowAdapter (var context: Context) : RecyclerView.Adapter<FavoriteShowAdapter.ShowViewHolder> (){
 
     var DataList = mutableListOf<Shows>()
     internal fun setData(showsArray : ArrayList<Shows>)
@@ -31,10 +30,12 @@ class ShowsAdapter (var context: Context) : RecyclerView.Adapter<ShowsAdapter.Sh
         //val ShowImg : ImageView = itemView.findViewById<ImageView>(R.id.showimageitem)
         val ShowLocation  : TextView = itemView.findViewById<TextView>(R.id.Locationshowitem)
         val ShowDate  : TextView = itemView.findViewById<TextView>(R.id.dateshowitem)
+        val favorite : Button = itemView.findViewById<Button>(R.id.favorite)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShowViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.itemshow, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.itemfavm, parent, false)
         return ShowViewHolder(itemView)
     }
 
@@ -89,5 +90,4 @@ class ShowsAdapter (var context: Context) : RecyclerView.Adapter<ShowsAdapter.Sh
         }
         //////////////////
     }
-
 }

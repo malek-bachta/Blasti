@@ -1,4 +1,4 @@
-package tn.mbach.warnMe.front
+package tn.mbach.Blasti.front
 
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
@@ -7,8 +7,8 @@ import android.view.View
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import tn.mbach.warnMe.R
-import tn.mbach.warnMe.databinding.HomeBinding
+import tn.mbach.Blasti.R
+import tn.mbach.Blasti.databinding.HomeBinding
 
 
 class Home : AppCompatActivity() {

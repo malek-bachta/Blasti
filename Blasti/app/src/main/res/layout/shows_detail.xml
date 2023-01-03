@@ -193,7 +193,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/ShowDetailDate" />
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/Reserver"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"
                     android:layout_marginBottom="16dp"
@@ -203,6 +203,16 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/ShowDetailPlaces"
                     app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:id="@+id/QRCode"
+                    android:layout_width="119dp"
+                    android:layout_height="128dp"
+                    android:layout_marginTop="60dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Reserver"
+                    app:srcCompat="@drawable/avatar" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

@@ -1,24 +1,30 @@
-package tn.mbach.warnMe.front
+package tn.mbach.Blasti.front
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.graphics.Bitmap
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.preference.PreferenceManager
 import com.google.gson.JsonObject
+import com.google.zxing.BarcodeFormat
+import com.google.zxing.WriterException
+import com.google.zxing.qrcode.QRCodeWriter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
-import tn.mbach.warnMe.Data.ID
-import tn.mbach.warnMe.Data.PREF_NAME
-import tn.mbach.warnMe.Network.ShowsApi
-import tn.mbach.warnMe.Network.retrofit
-import tn.mbach.warnMe.R
-import tn.mbach.warnMe.Utils.CustomToast
+import tn.mbach.Blasti.Data.ID
+import tn.mbach.Blasti.Data.PREF_NAME
+import tn.mbach.Blasti.Network.ShowsApi
+import tn.mbach.Blasti.Network.retrofit
+import tn.mbach.Blasti.R
+import tn.mbach.Blasti.Utils.CustomToast
 
 
 class ShowsDetail : AppCompatActivity() {
@@ -34,6 +40,9 @@ class ShowsDetail : AppCompatActivity() {
         val txtPlaces = findViewById<TextView>(R.id.ShowDetailPlaces)
 
         val favoriteShow = findViewById<Button>(R.id.favouriteS)
+
+        val QRCode = findViewById<ImageView>(R.id.QRCode)
+        val resever = findViewById<Button>(R.id.Reserver)
 
 
         val sharedPreference = PreferenceManager.getDefaultSharedPreferences(this)
@@ -76,6 +85,29 @@ class ShowsDetail : AppCompatActivity() {
             }else{
                 AddFavoriteToDB(this)
                 favoriteShow!!.setBackgroundResource(R.drawable.likefill)
+            }
+        }
+
+
+        resever.setOnClickListener{
+            val data = txtTitle.text.toString().trim()
+
+
+            val writer = QRCodeWriter()
+            try {
+                val bitMatrix = writer.encode(data, BarcodeFormat.QR_CODE,720,720)
+                val width = bitMatrix.width
+                val height = bitMatrix.height
+                val bmp = Bitmap.createBitmap(width,height, Bitmap.Config.RGB_565)
+                for (x in 0 until width){
+                    for (y in 0 until height){
+                        bmp.setPixel(x, y, if (bitMatrix[x,y]) Color.BLACK else Color.WHITE)
+                    }
+                }
+                QRCode.setImageBitmap(  bmp)
+
+            }catch (e: WriterException){
+                e.printStackTrace()
             }
         }
 

@@ -1,4 +1,4 @@
-package tn.mbach.warnMe
+package tn.mbach.Blasti
 
 import android.content.Intent
 import android.content.res.ColorStateList
@@ -11,11 +11,11 @@ import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
-import tn.mbach.warnMe.PasswordStrength.StrengthCalculator
-import tn.mbach.warnMe.Utils.CustomToast
-import tn.mbach.warnMe.Utils.ReadyFunction
-import tn.mbach.warnMe.Utils.Validator
-import tn.mbach.warnMe.ViewModel.UserViewModel
+import tn.mbach.Blasti.PasswordStrength.StrengthCalculator
+import tn.mbach.Blasti.Utils.CustomToast
+import tn.mbach.Blasti.Utils.ReadyFunction
+import tn.mbach.Blasti.Utils.Validator
+import tn.mbach.Blasti.ViewModel.UserViewModel
 
 class SignUp : AppCompatActivity() {
     private lateinit var btnGoToLogin: TextView

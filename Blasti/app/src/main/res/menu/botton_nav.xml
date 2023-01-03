@@ -7,13 +7,13 @@
         android:id="@+id/home"
         android:icon="@drawable/ic_baseline_home_24"/>
 
-    <item android:title="notification"
+    <item android:title="Historique"
         android:id="@+id/notification"
-        android:icon="@drawable/notifications"/>
+        android:icon="@drawable/ic_clock"/>
 
-    <item android:title="settings"
+    <item android:title="Favorites"
         android:id="@+id/settings"
-        android:icon="@drawable/ic_baseline_settings_24"/>
+        android:icon="@drawable/likefill"/>
     <item android:title="profile"
         android:id="@+id/profile"
         android:icon="@drawable/ic_baseline_person_24"/>

@@ -1,4 +1,4 @@
-package tn.mbach.warnMe.Network
+package tn.mbach.Blasti.Network
 
 class Loginresponse {
     internal var token: String? = null

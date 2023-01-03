@@ -1,4 +1,4 @@
-package tn.mbach.warnMe
+package tn.mbach.Blasti
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -17,13 +17,13 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import retrofit2.Retrofit
-import tn.mbach.warnMe.Data.*
-import tn.mbach.warnMe.Network.Loginresponse
-import tn.mbach.warnMe.Network.UserApi
-import tn.mbach.warnMe.Network.retrofit
-import tn.mbach.warnMe.Utils.CustomToast
-import tn.mbach.warnMe.back.HomeAdmin
-import tn.mbach.warnMe.front.Home
+import tn.mbach.Blasti.Data.*
+import tn.mbach.Blasti.Network.Loginresponse
+import tn.mbach.Blasti.Network.UserApi
+import tn.mbach.Blasti.Network.retrofit
+import tn.mbach.Blasti.Utils.CustomToast
+import tn.mbach.Blasti.back.HomeAdmin
+import tn.mbach.Blasti.front.Home
 
 class AutoLogin : AppCompatActivity() {
     //

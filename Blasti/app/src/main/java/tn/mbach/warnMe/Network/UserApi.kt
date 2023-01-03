@@ -1,11 +1,11 @@
-package tn.mbach.warnMe.Network
+package tn.mbach.Blasti.Network
 
 import com.google.gson.JsonObject
 import retrofit2.Call
 import retrofit2.Response
 
 import retrofit2.http.*
-import tn.mbach.warnMe.Models.User
+import tn.mbach.Blasti.Models.User
 import java.util.*
 
 

@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'tn.mbach.warnMe'
+    namespace 'tn.mbach.Blasti'
     compileSdk 32
 
     defaultConfig {
-        applicationId "tn.mbach.warnMe"
+        applicationId "tn.mbach.Blasti"
         minSdk 19
         targetSdk 32
         versionCode 1
@@ -64,5 +64,13 @@ dependencies {
     implementation "androidx.room:room-runtime:2.3.0"
     kapt "androidx.room:room-compiler:2.3.0"
     implementation "com.facebook.shimmer:shimmer:0.1.0@aar"
+    implementation "com.squareup.okhttp3:okhttp:4.7.2"
+
+    //
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+
+    implementation 'com.google.zxing:core:3.3.3'
+
 
 }

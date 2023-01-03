@@ -1,4 +1,4 @@
-package tn.mbach.warnMe.PasswordStrength
+package tn.mbach.Blasti.PasswordStrength
 
 enum class PasswordStrength {
     UNMEASURED,

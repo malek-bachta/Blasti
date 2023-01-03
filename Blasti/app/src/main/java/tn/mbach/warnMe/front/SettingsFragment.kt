@@ -1,4 +1,4 @@
-package tn.mbach.warnMe.front
+package tn.mbach.Blasti.front
 
 import android.annotation.SuppressLint
 import android.content.SharedPreferences
@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.facebook.shimmer.ShimmerFrameLayout
@@ -16,21 +17,35 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
-import tn.mbach.warnMe.Adapter.moviesAdapter
-import tn.mbach.warnMe.Data.ID
-import tn.mbach.warnMe.Data.PREF_NAME
-import tn.mbach.warnMe.Models.User
-import tn.mbach.warnMe.Network.MoviesApi
-import tn.mbach.warnMe.Network.retrofit
-import tn.mbach.warnMe.R
+import tn.mbach.Blasti.Adapter.FavoriteEventAdapter
+import tn.mbach.Blasti.Adapter.FavoriteMovieAdapter
+import tn.mbach.Blasti.Adapter.FavoriteShowAdapter
+import tn.mbach.Blasti.Data.ID
+import tn.mbach.Blasti.Data.PREF_NAME
+import tn.mbach.Blasti.Models.Events
+import tn.mbach.Blasti.Models.Shows
+import tn.mbach.Blasti.Models.User
+import tn.mbach.Blasti.Models.moviesss
+import tn.mbach.Blasti.Network.EventsApi
+import tn.mbach.Blasti.Network.MoviesApi
+import tn.mbach.Blasti.Network.ShowsApi
+import tn.mbach.Blasti.Network.retrofit
+import tn.mbach.Blasti.R
 
 
 class SettingsFragment : Fragment() {
 
-    lateinit var RecylerFavorite: RecyclerView
-    lateinit var AdapterRecommended: moviesAdapter
+    lateinit var favouriterecyclerM: RecyclerView
+    lateinit var favouriterecyclerE: RecyclerView
+    lateinit var favouriterecyclerS: RecyclerView
+    lateinit var AdapterFavoriteMovie: FavoriteMovieAdapter
+    lateinit var AdapterFavoriteEvent: FavoriteEventAdapter
+    lateinit var AdapterFavoriteShow: FavoriteShowAdapter
     private lateinit var MySharedPref: SharedPreferences
-    var PostsModels: ArrayList<User> = ArrayList()
+    var PostsModelsM: ArrayList<moviesss> = ArrayList()
+    var PostsModelsE: ArrayList<Events> = ArrayList()
+    var PostsModelsS: ArrayList<Shows> = ArrayList()
+
 //    lateinit var mShimmerViewContainer: ShimmerFrameLayout
 //    private lateinit var SwipeRefreshFavorite: SwipeRefreshLayout
 
@@ -45,16 +60,29 @@ class SettingsFragment : Fragment() {
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        RecylerFavorite = view.findViewById(R.id.favouriterecycler)
-        RecylerFavorite.setLayoutManager(StaggeredGridLayoutManager(2, 1))
-        AdapterRecommended = moviesAdapter(requireContext())
-        RecylerFavorite.adapter = AdapterRecommended
+        favouriterecyclerM = view.findViewById(R.id.favouriterecyclerM)
+        favouriterecyclerE = view.findViewById(R.id.favouriterecyclerE)
+        favouriterecyclerS = view.findViewById(R.id.favouriterecyclerS)
+        //
+        favouriterecyclerM.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
+        AdapterFavoriteMovie = FavoriteMovieAdapter(requireContext())
+        favouriterecyclerM.adapter = AdapterFavoriteMovie
+        //
+        favouriterecyclerE.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
+        AdapterFavoriteEvent = FavoriteEventAdapter(requireContext())
+        favouriterecyclerE.adapter = AdapterFavoriteEvent
+        //
+        favouriterecyclerS.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
+        AdapterFavoriteShow = FavoriteShowAdapter(requireContext())
+        favouriterecyclerS.adapter = AdapterFavoriteShow
         //
         MySharedPref =
             requireContext().getSharedPreferences(PREF_NAME, AppCompatActivity.MODE_PRIVATE);
         val idUser = MySharedPref.getString(ID, null)
         //
-        ShowMyFavorite(idUser.toString())
+        ShowMyFavoriteM(idUser.toString())
+        ShowMyFavoriteE(idUser.toString())
+//        ShowMyFavoriteS(idUser.toString())
         //
        /* mShimmerViewContainer = view.findViewById(R.id.shimmer_Favorite);
         //
@@ -66,31 +94,82 @@ class SettingsFragment : Fragment() {
         }*/
     }
 
-    fun ShowMyFavorite(idUser:String) {
+    fun ShowMyFavoriteM(idUser:String) {
         val map: HashMap<String, String> = HashMap()
         map["idUser"] = idUser
         //
         val retrofi: Retrofit = retrofit.getInstance()
         val service: MoviesApi = retrofi.create(MoviesApi::class.java)
-        val call: Call<List<User>> = service.FavoritefindByUser(map)
-        call.enqueue(object : Callback<List<User>> {
-            override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
-                PostsModels = ArrayList(response.body())
-                //println("Boddddyyyyyyyyyy "+response.body())
-                //println("Size in fun "+PostsModels.size)
-//                AdapterRecommended.setDataList(PostsModels)
-                AdapterRecommended.notifyDataSetChanged()
-                // Stopping Shimmer Effect's animation after data is loaded to ListView
-//                mShimmerViewContainer.stopShimmerAnimation();
-//                mShimmerViewContainer.setVisibility(View.GONE);
+        val call: Call<List<moviesss>> = service.FavoritefindByUser(map)
+        call.enqueue(object : Callback<List<moviesss>> {
+            override fun onResponse(call: Call<List<moviesss>>, response: Response<List<moviesss>>) {
+                PostsModelsM = ArrayList(response.body())
+                AdapterFavoriteMovie.setData(PostsModelsM)
+                AdapterFavoriteMovie.notifyDataSetChanged()
+                if (AdapterFavoriteMovie.itemCount==0)
+                {
+                    favouriterecyclerM.visibility = View.GONE
+                }
             }
             @SuppressLint("RestrictedApi")
-            override fun onFailure(call: Call<List<User>>, t: Throwable) {
+            override fun onFailure(call: Call<List<moviesss>>, t: Throwable) {
                 println("Message :" + t.stackTrace)
                 Log.d("***", "Opppsss" + t.message)
             }
         })
     }
+
+    fun ShowMyFavoriteE(idUser:String) {
+        val map: HashMap<String, String> = HashMap()
+        map["idUser"] = idUser
+        //
+        val retrofi: Retrofit = retrofit.getInstance()
+        val service: EventsApi = retrofi.create(EventsApi::class.java)
+        val call: Call<List<Events>> = service.FavoritefindByUser(map)
+        call.enqueue(object : Callback<List<Events>> {
+            override fun onResponse(call: Call<List<Events>>, response: Response<List<Events>>) {
+                PostsModelsE = ArrayList(response.body()!!)
+                AdapterFavoriteEvent.setData(PostsModelsE)
+                AdapterFavoriteEvent.notifyDataSetChanged()
+                if (AdapterFavoriteEvent.itemCount==0)
+                {
+                    favouriterecyclerE.visibility = View.GONE
+                }
+            }
+            @SuppressLint("RestrictedApi")
+            override fun onFailure(call: Call<List<Events>>, t: Throwable) {
+                println("Message :" + t.stackTrace)
+                Log.d("***", "Opppsss" + t.message)
+            }
+        })
+    }
+/*
+
+    fun ShowMyFavoriteS(idUser:String) {
+        val map: HashMap<String, String> = HashMap()
+        map["idUser"] = idUser
+        //
+        val retrofi: Retrofit = retrofit.getInstance()
+        val service: ShowsApi = retrofi.create(ShowsApi::class.java)
+        val call: Call<List<Shows>> = service.FavoritefindByUser(map)
+        call.enqueue(object : Callback<List<Shows>> {
+            override fun onResponse(call: Call<List<Shows>>, response: Response<List<Shows>>) {
+                PostsModelsS = ArrayList(response.body()!!)
+                AdapterFavoriteShow.setData(PostsModelsS)
+                AdapterFavoriteShow.notifyDataSetChanged()
+                if (AdapterFavoriteShow.itemCount==0)
+                {
+                    favouriterecyclerS.visibility = View.GONE
+                }
+            }
+            @SuppressLint("RestrictedApi")
+            override fun onFailure(call: Call<List<Shows>>, t: Throwable) {
+                println("Message :" + t.stackTrace)
+                Log.d("***", "Opppsss" + t.message)
+            }
+        })
+    }
+*/
 //
 //    override fun onResume() {
 //        super.onResume()

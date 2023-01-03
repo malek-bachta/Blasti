@@ -1,4 +1,4 @@
-package tn.mbach.warnMe.Network;
+package tn.mbach.Blasti.Network;
 
 import com.google.gson.JsonObject;
 
@@ -9,8 +9,8 @@ import retrofit2.Response
 import retrofit2.http.Body;
 import retrofit2.http.GET
 import retrofit2.http.POST;
-import tn.mbach.warnMe.Models.Events
-import tn.mbach.warnMe.Models.User
+import tn.mbach.Blasti.Models.Events
+import tn.mbach.Blasti.Models.User
 
 
 interface EventsApi {
@@ -26,8 +26,8 @@ interface EventsApi {
     @POST("api/favoriteEvent/add")
     fun AddFavorite(@Body map : HashMap<String, String>): Call<JsonObject>
 
-    @POST("api/favoriteEvent/FavoritefindByUser")
-    fun FavoritefindByUser(@Body map : HashMap<String, String>): Call<List<User>>
+    @POST("api/favoriteEvent/all")
+    fun FavoritefindByUser(@Body map : HashMap<String, String>): Call<List<Events>>
 
     @POST("api/favoriteEvent/delete")
     fun FavoriteDelete(@Body map : HashMap<String, String>): Call<JsonObject>

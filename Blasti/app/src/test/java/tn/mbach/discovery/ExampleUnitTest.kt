@@ -1,4 +1,4 @@
-package tn.mbach.warnMe
+package tn.mbach.Blasti
 
 import org.junit.Test
 

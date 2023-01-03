@@ -1,4 +1,4 @@
-package tn.mbach.warnMe.Models
+package tn.mbach.Blasti.Models
 
 import android.content.ContentValues
 import android.content.Context
@@ -11,11 +11,11 @@ import androidx.lifecycle.ViewModel
 import androidx.preference.PreferenceManager
 import kotlinx.coroutines.*
 import retrofit2.Retrofit
-import tn.mbach.warnMe.Data.ID
-import tn.mbach.warnMe.Data.PREF_NAME
-import tn.mbach.warnMe.Network.EventsApi
-import tn.mbach.warnMe.Network.retrofit
-import tn.mbach.warnMe.Utils.ReadyFunction
+import tn.mbach.Blasti.Data.ID
+import tn.mbach.Blasti.Data.PREF_NAME
+import tn.mbach.Blasti.Network.EventsApi
+import tn.mbach.Blasti.Network.retrofit
+import tn.mbach.Blasti.Utils.ReadyFunction
 
 class FavoriteEvents : ViewModel()  {
     val retrofi: Retrofit = retrofit.getInstance()

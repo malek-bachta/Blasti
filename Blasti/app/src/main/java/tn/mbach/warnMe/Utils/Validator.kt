@@ -1,9 +1,9 @@
-package tn.mbach.warnMe.Utils
+package tn.mbach.Blasti.Utils
 
 import android.widget.AutoCompleteTextView
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
-import tn.mbach.warnMe.Data.emailRegex
+import tn.mbach.Blasti.Data.emailRegex
 
 
 class Validator {

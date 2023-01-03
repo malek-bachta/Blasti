@@ -1,4 +1,4 @@
-package tn.mbach.warnMe.Utils
+package tn.mbach.Blasti.Utils
 
 import android.app.Activity
 import android.content.Context
@@ -10,8 +10,8 @@ import android.view.Window
 import android.view.WindowManager
 import android.view.animation.AlphaAnimation
 import android.view.inputmethod.InputMethodManager
-import tn.mbach.warnMe.front.Home
-import tn.mbach.warnMe.Login
+import tn.mbach.Blasti.front.Home
+import tn.mbach.Blasti.Login
 
 
 class ReadyFunction {

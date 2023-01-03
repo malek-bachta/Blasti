@@ -14,5 +14,5 @@ dependencyResolutionManagement {
 }
 
 
-rootProject.name = "warnMe"
+rootProject.name = "Blasti"
 include ':app'

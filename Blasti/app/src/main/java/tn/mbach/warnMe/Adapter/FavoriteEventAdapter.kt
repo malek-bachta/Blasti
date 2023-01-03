@@ -6,6 +6,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import androidx.preference.PreferenceManager
@@ -13,10 +14,13 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.*
 import tn.mbach.Blasti.Models.Events
 import tn.mbach.Blasti.Models.FavoriteEvents
+import tn.mbach.Blasti.Models.FavoriteMovies
+import tn.mbach.Blasti.Models.moviesss
 import tn.mbach.Blasti.R
 import tn.mbach.Blasti.front.EventDetail
+import tn.mbach.Blasti.front.MovieDetail
 
-class EventsAdapter (var context: Context) : RecyclerView.Adapter<EventsAdapter.eventViewHolder> (){
+class FavoriteEventAdapter (var context: Context) : RecyclerView.Adapter<FavoriteEventAdapter.eventViewHolder> (){
 
     var DataList = mutableListOf<Events>()
     internal fun setData(eventArray : ArrayList<Events>)
@@ -25,13 +29,15 @@ class EventsAdapter (var context: Context) : RecyclerView.Adapter<EventsAdapter.
     }
     class eventViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        //        val eventImg : ImageView = itemView.findViewById<ImageView>(R.id.eventimageitem)
-        val eventTitle  : TextView = itemView.findViewById<TextView>(R.id.Titleeventitem)
-        val eventDate  : TextView = itemView.findViewById<TextView>(R.id.dateeventitem)
+
+        // val eventImg : ImageView = itemView.findViewById<ImageView>(R.id.moviesimageitem)
+        val eventTitle  : TextView = itemView.findViewById<TextView>(R.id.title)
+        val eventDate  : TextView = itemView.findViewById<TextView>(R.id.datemoviesitem)
+        val favorite : Button = itemView.findViewById<Button>(R.id.favorite)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): eventViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.itemevent, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.itemfavm, parent, false)
         return eventViewHolder(itemView)
     }
 
